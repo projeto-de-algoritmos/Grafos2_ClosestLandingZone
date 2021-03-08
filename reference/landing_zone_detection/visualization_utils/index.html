@@ -476,31 +476,57 @@
 
 <span class="k">def</span> <span class="nf">item_from_color</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">col_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">row_size</span><span class="o">=</span><span class="mi">32</span><span class="p">):</span>
 
-    <span class="sd">&quot;&quot;&quot;Short summary.</span>
+    <span class="sd">&quot;&quot;&quot;Generates a matrix of size (col_size, row_size, len(color)) if color is 1D or a matrix of size (col_size, row_size) if color is a digit.</span>
 
 <span class="sd">    Parameters</span>
 
 <span class="sd">    ----------</span>
 
-<span class="sd">    color : type</span>
+<span class="sd">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
 
-<span class="sd">        Description of parameter `color`.</span>
+<span class="sd">    color : int or list</span>
 
-<span class="sd">    col_size : type</span>
+<span class="sd">        RGB, gray or binary color i.e [255,255,255], 255 or 1. Maybe even RGBA or whatever.</span>
 
-<span class="sd">        Description of parameter `col_size`.</span>
+<span class="sd">    col_size : int</span>
 
-<span class="sd">    row_size : type</span>
+<span class="sd">        Color size.</span>
 
-<span class="sd">        Description of parameter `row_size`.</span>
+<span class="sd">    row_size : int</span>
+
+<span class="sd">=======</span>
+
+<span class="sd">    color : List, default=Required</span>
+
+<span class="sd">        List with 3 int that describe rgb color.</span>
+
+<span class="sd">    col_size : Int, default=32</span>
+
+<span class="sd">        Color size.</span>
+
+<span class="sd">    row_size : Int, default=32</span>
+
+<span class="sd">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
+
+<span class="sd">        Size of a row.</span>
 
 <span class="sd">    Returns</span>
 
 <span class="sd">    -------</span>
 
-<span class="sd">    type</span>
+<span class="sd">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
 
-<span class="sd">        Description of returned object.</span>
+<span class="sd">    numpy.ndarray</span>
+
+<span class="sd">        2D matrix representing an image.</span>
+
+<span class="sd">=======</span>
+
+<span class="sd">    ndarray</span>
+
+<span class="sd">        Output array which has the same shape as color.</span>
+
+<span class="sd">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -530,39 +556,79 @@
 
                         <span class="n">img_dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">):</span>
 
-    <span class="sd">&quot;&quot;&quot;Short summary.</span>
+    <span class="sd">&quot;&quot;&quot;Convert a node list to an image. Do that by coloring the image items at the coordinates in the node_list.</span>
 
 <span class="sd">    Parameters</span>
 
 <span class="sd">    ----------</span>
 
-<span class="sd">    adj_matrix : type</span>
+<span class="sd">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
 
-<span class="sd">        Description of parameter `adj_matrix`.</span>
+<span class="sd">    adj_matrix : numpy.ndarray</span>
 
-<span class="sd">    value_to_color : type</span>
+<span class="sd">        Adjacent matrix where the meaning of each value is specified in the label_utils.py module.</span>
 
-<span class="sd">        Description of parameter `value_to_color`.</span>
+<span class="sd">    value_to_color : dict</span>
 
-<span class="sd">    num_cols : type</span>
+<span class="sd">        Dict to map each value in the adj_matrix to a differenct color.</span>
 
-<span class="sd">        Description of parameter `num_cols`.</span>
+<span class="sd">    num_cols : int</span>
 
-<span class="sd">    num_rows : type</span>
+<span class="sd">        Number of columns in each adj_matrix (or height_map) item.</span>
 
-<span class="sd">        Description of parameter `num_rows`.</span>
+<span class="sd">    num_rows : int</span>
 
-<span class="sd">    col_size : type</span>
+<span class="sd">        Number of rows in each adj_matrix (or height_map) item.</span>
 
-<span class="sd">        Description of parameter `col_size`.</span>
+<span class="sd">    col_size : int</span>
 
-<span class="sd">    row_size : type</span>
+<span class="sd">        Width of each adj_matrix (or height_map) item.</span>
 
-<span class="sd">        Description of parameter `row_size`.</span>
+<span class="sd">    row_size : int</span>
 
-<span class="sd">    img_dtype : type</span>
+<span class="sd">        Height of each adj_matrix (or height_map) item.</span>
 
-<span class="sd">        Description of parameter `img_dtype`.</span>
+<span class="sd">    img_dtype : int</span>
+
+<span class="sd">        Data type of the resulting image.</span>
+
+<span class="sd">    Returns</span>
+
+<span class="sd">    -------</span>
+
+<span class="sd">    numpy.ndarray</span>
+
+<span class="sd">        2D matrix representing an image.</span>
+
+<span class="sd">=======</span>
+
+<span class="sd">    adj_matrix : ndarray, default=Required</span>
+
+<span class="sd">        Adjacency matrix.</span>
+
+<span class="sd">    value_to_color : dict</span>
+
+<span class="sd">        Dict with colors of wich tipo of terrain.</span>
+
+<span class="sd">    num_cols : int, default=7</span>
+
+<span class="sd">        number of columns.</span>
+
+<span class="sd">    num_rows : type, default=7</span>
+
+<span class="sd">        number of rows.</span>
+
+<span class="sd">    col_size : type, default=32</span>
+
+<span class="sd">        Size of columns.</span>
+
+<span class="sd">    row_size : type, default=32</span>
+
+<span class="sd">        number of rows.</span>
+
+<span class="sd">    img_dtype : type, default=np.uint8</span>
+
+<span class="sd">        Data type of image.</span>
 
 <span class="sd">    Returns</span>
 
@@ -570,7 +636,9 @@
 
 <span class="sd">    type</span>
 
-<span class="sd">        Description of returned object.</span>
+<span class="sd">        Image.</span>
+
+<span class="sd">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -620,47 +688,81 @@
 
                        <span class="n">img_dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">):</span>
 
-    <span class="sd">&quot;&quot;&quot;Short summary.</span>
+    <span class="sd">&quot;&quot;&quot;Convert a node list to an image. Do that by coloring the image items at the coordinates in the node_list.</span>
 
 <span class="sd">    Parameters</span>
 
 <span class="sd">    ----------</span>
 
-<span class="sd">    node_list : type</span>
+<span class="sd">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
 
-<span class="sd">        Description of parameter `node_list`.</span>
+<span class="sd">    node_list : list</span>
 
-<span class="sd">    item_color : type</span>
+<span class="sd">        List of node coordinates i.e [(0,0), (0,1), (0,2), (1,2)].</span>
 
-<span class="sd">        Description of parameter `item_color`.</span>
+<span class="sd">    item_color : list</span>
 
-<span class="sd">    num_cols : type</span>
+<span class="sd">        Color of each node/item.</span>
 
-<span class="sd">        Description of parameter `num_cols`.</span>
+<span class="sd">    num_cols : int</span>
 
-<span class="sd">    num_rows : type</span>
+<span class="sd">        Number of columns in each adj_matrix (or height_map) item.</span>
 
-<span class="sd">        Description of parameter `num_rows`.</span>
+<span class="sd">    num_rows : int</span>
 
-<span class="sd">    col_size : type</span>
+<span class="sd">        Number of rows in each adj_matrix (or height_map) item.</span>
 
-<span class="sd">        Description of parameter `col_size`.</span>
+<span class="sd">    col_size : int</span>
 
-<span class="sd">    row_size : type</span>
+<span class="sd">        Width of each adj_matrix (or height_map) item.</span>
 
-<span class="sd">        Description of parameter `row_size`.</span>
+<span class="sd">    row_size : int</span>
 
-<span class="sd">    img_dtype : type</span>
+<span class="sd">        Height of each adj_matrix (or height_map) item.</span>
 
-<span class="sd">        Description of parameter `img_dtype`.</span>
+<span class="sd">    img_dtype : int</span>
+
+<span class="sd">        Data type of the resulting image.</span>
+
+<span class="sd">=======</span>
+
+<span class="sd">    node_list : List</span>
+
+<span class="sd">        list of nodes.</span>
+
+<span class="sd">    item_color : List</span>
+
+<span class="sd">        Item Color`.</span>
+
+<span class="sd">    num_cols : Int</span>
+
+<span class="sd">        Number of colors.</span>
+
+<span class="sd">    num_rows : int</span>
+
+<span class="sd">        Number of rows.</span>
+
+<span class="sd">    col_size : int</span>
+
+<span class="sd">        Color size.</span>
+
+<span class="sd">    row_size : int</span>
+
+<span class="sd">        Row size.</span>
+
+<span class="sd">    img_dtype : int</span>
+
+<span class="sd">        image Data type`.</span>
+
+<span class="sd">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="sd">    Returns</span>
 
 <span class="sd">    -------</span>
 
-<span class="sd">    type</span>
+<span class="sd">    numpy.ndarray</span>
 
-<span class="sd">        Description of returned object.</span>
+<span class="sd">        2D matrix representing an image.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -690,35 +792,55 @@
 
 <span class="k">def</span> <span class="nf">plot_frame</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">224</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">224</span><span class="p">,</span> <span class="n">images_to_overlay</span><span class="o">=</span><span class="p">[]):</span>
 
-    <span class="sd">&quot;&quot;&quot;Short summary.</span>
+    <span class="sd">&quot;&quot;&quot;Method to plot the frame.</span>
 
 <span class="sd">    Parameters</span>
 
 <span class="sd">    ----------</span>
 
+<span class="sd">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
+
+<span class="sd">    frame : numpy.ndarray</span>
+
+<span class="sd">        2D matrix representing an image.</span>
+
+<span class="sd">    width : int</span>
+
+<span class="sd">        Frame width.</span>
+
+<span class="sd">    height : int</span>
+
+<span class="sd">        Frame height.</span>
+
+<span class="sd">    images_to_overlay : list</span>
+
+<span class="sd">        List of images to overlay on top of the frame.</span>
+
+<span class="sd">=======</span>
+
 <span class="sd">    frame : type</span>
 
 <span class="sd">        Description of parameter `frame`.</span>
 
-<span class="sd">    width : type</span>
+<span class="sd">    width : Int</span>
 
-<span class="sd">        Description of parameter `width`.</span>
+<span class="sd">        Frame width.</span>
 
-<span class="sd">    height : type</span>
+<span class="sd">    height : Int</span>
 
-<span class="sd">        Description of parameter `height`.</span>
+<span class="sd">        Frame height.</span>
 
-<span class="sd">    images_to_overlay : type</span>
+<span class="sd">    images_to_overlay : List</span>
 
-<span class="sd">        Description of parameter `images_to_overlay`.</span>
+<span class="sd">        List of frame to overlay.</span>
 
 <span class="sd">    Returns</span>
 
 <span class="sd">    -------</span>
 
-<span class="sd">    type</span>
+<span class="sd">    None</span>
 
-<span class="sd">        Description of returned object.</span>
+<span class="sd">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -766,170 +888,201 @@
 <span class="p">)</span>
 </code></pre></div>
 
-<p>Short summary.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<p>Convert a node list to an image. Do that by coloring the image items at the coordinates in the node_list.</p>
+<p>Parameters
+    ----------
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+    adj_matrix : numpy.ndarray
+        Adjacent matrix where the meaning of each value is specified in the label_utils.py module.
+    value_to_color : dict
+        Dict to map each value in the adj_matrix to a differenct color.
+    num_cols : int
+        Number of columns in each adj_matrix (or height_map) item.
+    num_rows : int
+        Number of rows in each adj_matrix (or height_map) item.
+    col_size : int
+        Width of each adj_matrix (or height_map) item.
+    row_size : int
+        Height of each adj_matrix (or height_map) item.
+    img_dtype : int
+        Data type of the resulting image.</p>
+<div class="codehilite"><pre><span></span><code><span class="gh">Returns</span>
+<span class="gh">-------</span>
+numpy.ndarray
+    2D matrix representing an image.
+</code></pre></div>
 
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>adj_matrix</td>
-<td>type</td>
-<td>Description of parameter <code>adj_matrix</code>.</td>
+<p>=======
+    adj_matrix : ndarray, default=Required
+        Adjacency matrix.
+    value_to_color : dict
+        Dict with colors of wich tipo of terrain.
+    num_cols : int, default=7
+        number of columns.
+    num_rows : type, default=7
+        number of rows.
+    col_size : type, default=32
+        Size of columns.
+    row_size : type, default=32
+        number of rows.
+    img_dtype : type, default=np.uint8
+        Data type of image.</p>
+<div class="codehilite"><pre><span></span><code><span class="gh">Returns</span>
+<span class="gh">-------</span>
+type
+    Image.
+</code></pre></div>
 
-</tr>
-<tr>
-<td>value_to_color</td>
-<td>type</td>
-<td>Description of parameter <code>value_to_color</code>.</td>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>babf6803825d127003e989374de11514beea5d59</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span><span class="w"> </span><span class="n">adj_matrix_to_image</span><span class="p">(</span><span class="n">adj_matrix</span><span class="p">,</span><span class="w"></span>
 
-</tr>
-<tr>
-<td>num_cols</td>
-<td>type</td>
-<td>Description of parameter <code>num_cols</code>.</td>
+<span class="w">                        </span><span class="n">value_to_color</span><span class="o">=</span><span class="err">{</span><span class="mi">1</span><span class="err">:</span><span class="w"> </span><span class="o">[</span><span class="n">80, 30, 50</span><span class="o">]</span><span class="p">,</span><span class="w"></span>
 
-</tr>
-<tr>
-<td>num_rows</td>
-<td>type</td>
-<td>Description of parameter <code>num_rows</code>.</td>
+<span class="w">                                        </span><span class="mi">0</span><span class="err">:</span><span class="w"> </span><span class="o">[</span><span class="n">168, 50, 125</span><span class="o">]</span><span class="p">,</span><span class="w"></span>
 
-</tr>
-<tr>
-<td>col_size</td>
-<td>type</td>
-<td>Description of parameter <code>col_size</code>.</td>
+<span class="w">                                        </span><span class="o">-</span><span class="mi">1</span><span class="err">:</span><span class="w"> </span><span class="o">[</span><span class="n">0, 0, 255</span><span class="o">]</span><span class="err">}</span><span class="p">,</span><span class="w"></span>
 
-</tr>
-<tr>
-<td>row_size</td>
-<td>type</td>
-<td>Description of parameter <code>row_size</code>.</td>
+<span class="w">                        </span><span class="n">num_channels</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="w"></span>
 
-</tr>
-<tr>
-<td>img_dtype</td>
-<td>type</td>
-<td>Description of parameter <code>img_dtype</code>.</td>
+<span class="w">                        </span><span class="n">num_cols</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="n">num_rows</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span><span class="w"></span>
 
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>type</td>
-<td>Description of returned object.</td>
-</tr>
-</tbody>
-</table>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">adj_matrix_to_image</span><span class="p">(</span><span class="n">adj_matrix</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">col_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span><span class="w"> </span><span class="n">row_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span><span class="w"></span>
 
-                        <span class="n">value_to_color</span><span class="o">=</span><span class="err">{</span><span class="mi">1</span><span class="o">:</span> <span class="err">[</span><span class="mi">80</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">50</span><span class="err">]</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">img_dtype</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">uint8</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
 
-                                        <span class="mi">0</span><span class="o">:</span> <span class="err">[</span><span class="mi">168</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">125</span><span class="err">]</span><span class="p">,</span>
+<span class="w">    </span><span class="ss">&quot;&quot;&quot;Convert a node list to an image. Do that by coloring the image items at the coordinates in the node_list.</span>
 
-                                        <span class="o">-</span><span class="mi">1</span><span class="o">:</span> <span class="err">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="err">]}</span><span class="p">,</span>
+<span class="ss">    Parameters</span>
 
-                        <span class="n">num_channels</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+<span class="ss">    ----------</span>
 
-                        <span class="n">num_cols</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">num_rows</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>
+<span class="ss">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
 
-                        <span class="n">col_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">row_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span>
+<span class="ss">    adj_matrix : numpy.ndarray</span>
 
-                        <span class="n">img_dtype</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">uint8</span><span class="p">)</span><span class="o">:</span>
+<span class="ss">        Adjacent matrix where the meaning of each value is specified in the label_utils.py module.</span>
 
-    <span class="s2">&quot;</span><span class="se">&quot;&quot;</span><span class="s2">Short summary.</span>
+<span class="ss">    value_to_color : dict</span>
 
-<span class="s2">    Parameters</span>
+<span class="ss">        Dict to map each value in the adj_matrix to a differenct color.</span>
 
-<span class="s2">    ----------</span>
+<span class="ss">    num_cols : int</span>
 
-<span class="s2">    adj_matrix : type</span>
+<span class="ss">        Number of columns in each adj_matrix (or height_map) item.</span>
 
-<span class="s2">        Description of parameter `adj_matrix`.</span>
+<span class="ss">    num_rows : int</span>
 
-<span class="s2">    value_to_color : type</span>
+<span class="ss">        Number of rows in each adj_matrix (or height_map) item.</span>
 
-<span class="s2">        Description of parameter `value_to_color`.</span>
+<span class="ss">    col_size : int</span>
 
-<span class="s2">    num_cols : type</span>
+<span class="ss">        Width of each adj_matrix (or height_map) item.</span>
 
-<span class="s2">        Description of parameter `num_cols`.</span>
+<span class="ss">    row_size : int</span>
 
-<span class="s2">    num_rows : type</span>
+<span class="ss">        Height of each adj_matrix (or height_map) item.</span>
 
-<span class="s2">        Description of parameter `num_rows`.</span>
+<span class="ss">    img_dtype : int</span>
 
-<span class="s2">    col_size : type</span>
+<span class="ss">        Data type of the resulting image.</span>
 
-<span class="s2">        Description of parameter `col_size`.</span>
+<span class="ss">    Returns</span>
 
-<span class="s2">    row_size : type</span>
+<span class="ss">    -------</span>
 
-<span class="s2">        Description of parameter `row_size`.</span>
+<span class="ss">    numpy.ndarray</span>
 
-<span class="s2">    img_dtype : type</span>
+<span class="ss">        2D matrix representing an image.</span>
 
-<span class="s2">        Description of parameter `img_dtype`.</span>
+<span class="ss">=======</span>
 
-<span class="s2">    Returns</span>
+<span class="ss">    adj_matrix : ndarray, default=Required</span>
 
-<span class="s2">    -------</span>
+<span class="ss">        Adjacency matrix.</span>
 
-<span class="s2">    type</span>
+<span class="ss">    value_to_color : dict</span>
 
-<span class="s2">        Description of returned object.</span>
+<span class="ss">        Dict with colors of wich tipo of terrain.</span>
 
-<span class="s2">    </span><span class="se">&quot;&quot;</span><span class="s2">&quot;</span>
+<span class="ss">    num_cols : int, default=7</span>
 
-    <span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">zeros</span><span class="p">(</span>
+<span class="ss">        number of columns.</span>
 
-        <span class="p">(</span><span class="n">num_cols</span><span class="o">*</span><span class="n">col_size</span><span class="p">,</span> <span class="n">num_rows</span><span class="o">*</span><span class="n">row_size</span><span class="p">,</span> <span class="n">num_channels</span><span class="p">),</span>
+<span class="ss">    num_rows : type, default=7</span>
 
-        <span class="n">dtype</span><span class="o">=</span><span class="n">img_dtype</span>
+<span class="ss">        number of rows.</span>
 
-    <span class="p">)</span>
+<span class="ss">    col_size : type, default=32</span>
 
-    <span class="n">value_to_item</span> <span class="o">=</span> <span class="err">{</span>
+<span class="ss">        Size of columns.</span>
 
-        <span class="mi">1</span><span class="o">:</span> <span class="n">item_from_color</span><span class="p">(</span><span class="n">value_to_color</span><span class="err">[</span><span class="mi">1</span><span class="err">]</span><span class="p">),</span>
+<span class="ss">    row_size : type, default=32</span>
 
-        <span class="mi">0</span><span class="o">:</span> <span class="n">item_from_color</span><span class="p">(</span><span class="n">value_to_color</span><span class="err">[</span><span class="mi">0</span><span class="err">]</span><span class="p">),</span>
+<span class="ss">        number of rows.</span>
 
-        <span class="o">-</span><span class="mi">1</span><span class="o">:</span> <span class="n">item_from_color</span><span class="p">(</span><span class="n">value_to_color</span><span class="err">[</span><span class="o">-</span><span class="mi">1</span><span class="err">]</span><span class="p">),</span>
+<span class="ss">    img_dtype : type, default=np.uint8</span>
 
-    <span class="err">}</span>
+<span class="ss">        Data type of image.</span>
 
-    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">col</span> <span class="k">in</span> <span class="n">enumerate</span><span class="p">(</span><span class="n">adj_matrix</span><span class="p">)</span><span class="o">:</span>
+<span class="ss">    Returns</span>
 
-        <span class="n">x1</span> <span class="o">=</span> <span class="n">col_size</span><span class="o">*</span><span class="n">i</span>
+<span class="ss">    -------</span>
 
-        <span class="n">x2</span> <span class="o">=</span> <span class="n">col_size</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="ss">    type</span>
 
-        <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="k">value</span> <span class="k">in</span> <span class="n">enumerate</span><span class="p">(</span><span class="n">col</span><span class="p">)</span><span class="o">:</span>
+<span class="ss">        Image.</span>
 
-            <span class="n">y1</span> <span class="o">=</span> <span class="n">row_size</span><span class="o">*</span><span class="n">j</span>
+<span class="ss">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
-            <span class="n">y2</span> <span class="o">=</span> <span class="n">row_size</span><span class="o">*</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="ss">    &quot;&quot;&quot;</span><span class="w"></span>
 
-            <span class="n">img</span><span class="err">[</span><span class="n">x1</span><span class="o">:</span><span class="n">x2</span><span class="p">,</span> <span class="n">y1</span><span class="o">:</span><span class="n">y2</span><span class="p">,</span> <span class="o">:</span><span class="err">]</span> <span class="o">=</span> <span class="n">value_to_item</span><span class="err">[</span><span class="k">value</span><span class="err">]</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="w">    </span><span class="n">img</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np</span><span class="p">.</span><span class="n">zeros</span><span class="p">(</span><span class="w"></span>
 
-    <span class="k">return</span> <span class="n">img</span>
+<span class="w">        </span><span class="p">(</span><span class="n">num_cols</span><span class="o">*</span><span class="n">col_size</span><span class="p">,</span><span class="w"> </span><span class="n">num_rows</span><span class="o">*</span><span class="n">row_size</span><span class="p">,</span><span class="w"> </span><span class="n">num_channels</span><span class="p">),</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">dtype</span><span class="o">=</span><span class="n">img_dtype</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">value_to_item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
+
+<span class="w">        </span><span class="mi">1</span><span class="err">:</span><span class="w"> </span><span class="n">item_from_color</span><span class="p">(</span><span class="n">value_to_color</span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="p">),</span><span class="w"></span>
+
+<span class="w">        </span><span class="mi">0</span><span class="err">:</span><span class="w"> </span><span class="n">item_from_color</span><span class="p">(</span><span class="n">value_to_color</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">),</span><span class="w"></span>
+
+<span class="w">        </span><span class="o">-</span><span class="mi">1</span><span class="err">:</span><span class="w"> </span><span class="n">item_from_color</span><span class="p">(</span><span class="n">value_to_color</span><span class="o">[</span><span class="n">-1</span><span class="o">]</span><span class="p">),</span><span class="w"></span>
+
+<span class="w">    </span><span class="err">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">enumerate</span><span class="p">(</span><span class="n">adj_matrix</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">x1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col_size</span><span class="o">*</span><span class="n">i</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">x2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col_size</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">enumerate</span><span class="p">(</span><span class="n">col</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">y1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">row_size</span><span class="o">*</span><span class="n">j</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">y2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">row_size</span><span class="o">*</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">img</span><span class="o">[</span><span class="n">x1:x2, y1:y2, :</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value_to_item</span><span class="o">[</span><span class="n">value</span><span class="o">]</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">img</span><span class="w"></span>
 </code></pre></div>
 
 </details>
@@ -941,92 +1094,127 @@
 <span class="p">)</span>
 </code></pre></div>
 
-<p>Short summary.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<p>Generates a matrix of size (col_size, row_size, len(color)) if color is 1D or a matrix of size (col_size, row_size) if color is a digit.</p>
+<p>Parameters
+    ----------
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+    color : int or list
+        RGB, gray or binary color i.e [255,255,255], 255 or 1. Maybe even RGBA or whatever.
+    col_size : int
+        Color size.
+    row_size : int
+=======
+    color : List, default=Required
+        List with 3 int that describe rgb color.
+    col_size : Int, default=32
+        Color size.
+    row_size : Int, default=32</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>babf6803825d127003e989374de11514beea5d59
+        Size of a row.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<div class="codehilite"><pre><span></span><code><span class="err">Returns</span>
+<span class="err">-------</span>
+</code></pre></div>
 
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>color</td>
-<td>type</td>
-<td>Description of parameter <code>color</code>.</td>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+    numpy.ndarray
+        2D matrix representing an image.
+=======
+    ndarray
+        Output array which has the same shape as color.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>babf6803825d127003e989374de11514beea5d59</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span><span class="w"> </span><span class="n">item_from_color</span><span class="p">(</span><span class="n">color</span><span class="p">,</span><span class="w"> </span><span class="n">col_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span><span class="w"> </span><span class="n">row_size</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
 
-</tr>
-<tr>
-<td>col_size</td>
-<td>type</td>
-<td>Description of parameter <code>col_size</code>.</td>
+<span class="w">    </span><span class="ss">&quot;&quot;&quot;Generates a matrix of size (col_size, row_size, len(color)) if color is 1D or a matrix of size (col_size, row_size) if color is a digit.</span>
 
-</tr>
-<tr>
-<td>row_size</td>
-<td>type</td>
-<td>Description of parameter <code>row_size</code>.</td>
+<span class="ss">    Parameters</span>
 
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>type</td>
-<td>Description of returned object.</td>
-</tr>
-</tbody>
-</table>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">item_from_color</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">col_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">row_size</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span><span class="o">:</span>
+<span class="ss">    ----------</span>
 
-    <span class="s2">&quot;</span><span class="se">&quot;&quot;</span><span class="s2">Short summary.</span>
+<span class="ss">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
 
-<span class="s2">    Parameters</span>
+<span class="ss">    color : int or list</span>
 
-<span class="s2">    ----------</span>
+<span class="ss">        RGB, gray or binary color i.e [255,255,255], 255 or 1. Maybe even RGBA or whatever.</span>
 
-<span class="s2">    color : type</span>
+<span class="ss">    col_size : int</span>
 
-<span class="s2">        Description of parameter `color`.</span>
+<span class="ss">        Color size.</span>
 
-<span class="s2">    col_size : type</span>
+<span class="ss">    row_size : int</span>
 
-<span class="s2">        Description of parameter `col_size`.</span>
+<span class="ss">=======</span>
 
-<span class="s2">    row_size : type</span>
+<span class="ss">    color : List, default=Required</span>
 
-<span class="s2">        Description of parameter `row_size`.</span>
+<span class="ss">        List with 3 int that describe rgb color.</span>
 
-<span class="s2">    Returns</span>
+<span class="ss">    col_size : Int, default=32</span>
 
-<span class="s2">    -------</span>
+<span class="ss">        Color size.</span>
 
-<span class="s2">    type</span>
+<span class="ss">    row_size : Int, default=32</span>
 
-<span class="s2">        Description of returned object.</span>
+<span class="ss">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
-<span class="s2">    </span><span class="se">&quot;&quot;</span><span class="s2">&quot;</span>
+<span class="ss">        Size of a row.</span>
 
-    <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="k">repeat</span><span class="p">(</span>
+<span class="ss">    Returns</span>
 
-        <span class="err">[</span><span class="n">np</span><span class="p">.</span><span class="k">repeat</span><span class="p">(</span><span class="err">[</span><span class="n">color</span><span class="err">]</span><span class="p">,</span> <span class="n">col_size</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="err">]</span><span class="p">,</span>
+<span class="ss">    -------</span>
 
-        <span class="n">row_size</span><span class="p">,</span>
+<span class="ss">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
 
-        <span class="n">axis</span><span class="o">=</span><span class="mi">0</span>
+<span class="ss">    numpy.ndarray</span>
 
-    <span class="p">)</span>
+<span class="ss">        2D matrix representing an image.</span>
+
+<span class="ss">=======</span>
+
+<span class="ss">    ndarray</span>
+
+<span class="ss">        Output array which has the same shape as color.</span>
+
+<span class="ss">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
+
+<span class="ss">    &quot;&quot;&quot;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">np</span><span class="p">.</span><span class="n">repeat</span><span class="p">(</span><span class="w"></span>
+
+<span class="w">        </span><span class="o">[</span><span class="n">np.repeat([color</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">col_size</span><span class="p">,</span><span class="w"> </span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="err">]</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">row_size</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 
 </details>
@@ -1043,80 +1231,63 @@
 <span class="p">)</span>
 </code></pre></div>
 
-<p>Short summary.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<p>Convert a node list to an image. Do that by coloring the image items at the coordinates in the node_list.</p>
+<p>Parameters
+    ----------
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+    node_list : list
+        List of node coordinates i.e [(0,0), (0,1), (0,2), (1,2)].
+    item_color : list
+        Color of each node/item.
+    num_cols : int
+        Number of columns in each adj_matrix (or height_map) item.
+    num_rows : int
+        Number of rows in each adj_matrix (or height_map) item.
+    col_size : int
+        Width of each adj_matrix (or height_map) item.
+    row_size : int
+        Height of each adj_matrix (or height_map) item.
+    img_dtype : int
+        Data type of the resulting image.
+=======
+    node_list : List
+        list of nodes.
+    item_color : List
+        Item Color<code>.
+    num_cols : Int
+        Number of colors.
+    num_rows : int
+        Number of rows.
+    col_size : int
+        Color size.
+    row_size : int
+        Row size.
+    img_dtype : int
+        image Data type</code>.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>babf6803825d127003e989374de11514beea5d59</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<div class="codehilite"><pre><span></span><code><span class="gh">Returns</span>
+<span class="gh">-------</span>
+numpy.ndarray
+    2D matrix representing an image.
+</code></pre></div>
 
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>node_list</td>
-<td>type</td>
-<td>Description of parameter <code>node_list</code>.</td>
-
-</tr>
-<tr>
-<td>item_color</td>
-<td>type</td>
-<td>Description of parameter <code>item_color</code>.</td>
-
-</tr>
-<tr>
-<td>num_cols</td>
-<td>type</td>
-<td>Description of parameter <code>num_cols</code>.</td>
-
-</tr>
-<tr>
-<td>num_rows</td>
-<td>type</td>
-<td>Description of parameter <code>num_rows</code>.</td>
-
-</tr>
-<tr>
-<td>col_size</td>
-<td>type</td>
-<td>Description of parameter <code>col_size</code>.</td>
-
-</tr>
-<tr>
-<td>row_size</td>
-<td>type</td>
-<td>Description of parameter <code>row_size</code>.</td>
-
-</tr>
-<tr>
-<td>img_dtype</td>
-<td>type</td>
-<td>Description of parameter <code>img_dtype</code>.</td>
-
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>type</td>
-<td>Description of returned object.</td>
-</tr>
-</tbody>
-</table>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">node_list_to_image</span><span class="p">(</span><span class="n">node_list</span><span class="p">,</span>
 
-                       <span class="n">item_color</span><span class="o">=</span><span class="err">[</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="err">]</span><span class="p">,</span>
+                       <span class="n">item_color</span><span class="o">=</span><span class="p">[</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
 
                        <span class="n">num_channels</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
 
@@ -1124,51 +1295,85 @@
 
                        <span class="n">col_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">row_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span>
 
-                       <span class="n">img_dtype</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">uint8</span><span class="p">)</span><span class="o">:</span>
+                       <span class="n">img_dtype</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">uint8</span><span class="p">):</span>
 
-    <span class="s2">&quot;</span><span class="se">&quot;&quot;</span><span class="s2">Short summary.</span>
+    <span class="ss">&quot;&quot;&quot;Convert a node list to an image. Do that by coloring the image items at the coordinates in the node_list.</span>
 
-<span class="s2">    Parameters</span>
+<span class="ss">    Parameters</span>
 
-<span class="s2">    ----------</span>
+<span class="ss">    ----------</span>
 
-<span class="s2">    node_list : type</span>
+<span class="ss">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
 
-<span class="s2">        Description of parameter `node_list`.</span>
+<span class="ss">    node_list : list</span>
 
-<span class="s2">    item_color : type</span>
+<span class="ss">        List of node coordinates i.e [(0,0), (0,1), (0,2), (1,2)].</span>
 
-<span class="s2">        Description of parameter `item_color`.</span>
+<span class="ss">    item_color : list</span>
 
-<span class="s2">    num_cols : type</span>
+<span class="ss">        Color of each node/item.</span>
 
-<span class="s2">        Description of parameter `num_cols`.</span>
+<span class="ss">    num_cols : int</span>
 
-<span class="s2">    num_rows : type</span>
+<span class="ss">        Number of columns in each adj_matrix (or height_map) item.</span>
 
-<span class="s2">        Description of parameter `num_rows`.</span>
+<span class="ss">    num_rows : int</span>
 
-<span class="s2">    col_size : type</span>
+<span class="ss">        Number of rows in each adj_matrix (or height_map) item.</span>
 
-<span class="s2">        Description of parameter `col_size`.</span>
+<span class="ss">    col_size : int</span>
 
-<span class="s2">    row_size : type</span>
+<span class="ss">        Width of each adj_matrix (or height_map) item.</span>
 
-<span class="s2">        Description of parameter `row_size`.</span>
+<span class="ss">    row_size : int</span>
 
-<span class="s2">    img_dtype : type</span>
+<span class="ss">        Height of each adj_matrix (or height_map) item.</span>
 
-<span class="s2">        Description of parameter `img_dtype`.</span>
+<span class="ss">    img_dtype : int</span>
 
-<span class="s2">    Returns</span>
+<span class="ss">        Data type of the resulting image.</span>
 
-<span class="s2">    -------</span>
+<span class="ss">=======</span>
 
-<span class="s2">    type</span>
+<span class="ss">    node_list : List</span>
 
-<span class="s2">        Description of returned object.</span>
+<span class="ss">        list of nodes.</span>
 
-<span class="s2">    </span><span class="se">&quot;&quot;</span><span class="s2">&quot;</span>
+<span class="ss">    item_color : List</span>
+
+<span class="ss">        Item Color`.</span>
+
+<span class="ss">    num_cols : Int</span>
+
+<span class="ss">        Number of colors.</span>
+
+<span class="ss">    num_rows : int</span>
+
+<span class="ss">        Number of rows.</span>
+
+<span class="ss">    col_size : int</span>
+
+<span class="ss">        Color size.</span>
+
+<span class="ss">    row_size : int</span>
+
+<span class="ss">        Row size.</span>
+
+<span class="ss">    img_dtype : int</span>
+
+<span class="ss">        image Data type`.</span>
+
+<span class="ss">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
+
+<span class="ss">    Returns</span>
+
+<span class="ss">    -------</span>
+
+<span class="ss">    numpy.ndarray</span>
+
+<span class="ss">        2D matrix representing an image.</span>
+
+<span class="ss">    &quot;&quot;&quot;</span>
 
     <span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">zeros</span><span class="p">(</span>
 
@@ -1180,17 +1385,17 @@
 
     <span class="n">item</span> <span class="o">=</span> <span class="n">item_from_color</span><span class="p">(</span><span class="n">item_color</span><span class="p">)</span>
 
-    <span class="k">for</span> <span class="n">node</span> <span class="k">in</span> <span class="n">node_list</span><span class="o">:</span>
+    <span class="k">for</span> <span class="n">node</span> <span class="k">in</span> <span class="n">node_list</span><span class="p">:</span>
 
-        <span class="n">x1</span> <span class="o">=</span> <span class="n">col_size</span><span class="o">*</span><span class="n">node</span><span class="err">[</span><span class="mi">0</span><span class="err">]</span>
+        <span class="n">x1</span> <span class="o">=</span> <span class="n">col_size</span><span class="o">*</span><span class="n">node</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
-        <span class="n">x2</span> <span class="o">=</span> <span class="n">col_size</span><span class="o">*</span><span class="p">(</span><span class="n">node</span><span class="err">[</span><span class="mi">0</span><span class="err">]</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">x2</span> <span class="o">=</span> <span class="n">col_size</span><span class="o">*</span><span class="p">(</span><span class="n">node</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
 
-        <span class="n">y1</span> <span class="o">=</span> <span class="n">row_size</span><span class="o">*</span><span class="n">node</span><span class="err">[</span><span class="mi">1</span><span class="err">]</span>
+        <span class="n">y1</span> <span class="o">=</span> <span class="n">row_size</span><span class="o">*</span><span class="n">node</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 
-        <span class="n">y2</span> <span class="o">=</span> <span class="n">row_size</span><span class="o">*</span><span class="p">(</span><span class="n">node</span><span class="err">[</span><span class="mi">1</span><span class="err">]</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">y2</span> <span class="o">=</span> <span class="n">row_size</span><span class="o">*</span><span class="p">(</span><span class="n">node</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
 
-        <span class="n">img</span><span class="err">[</span><span class="n">x1</span><span class="o">:</span><span class="n">x2</span><span class="p">,</span> <span class="n">y1</span><span class="o">:</span><span class="n">y2</span><span class="p">,</span> <span class="o">:</span><span class="err">]</span> <span class="o">=</span> <span class="n">item</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">img</span><span class="p">[</span><span class="n">x1</span><span class="p">:</span><span class="n">x2</span><span class="p">,</span> <span class="n">y1</span><span class="p">:</span><span class="n">y2</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">item</span><span class="p">.</span><span class="k">copy</span><span class="p">()</span>
 
     <span class="k">return</span> <span class="n">img</span>
 </code></pre></div>
@@ -1205,90 +1410,98 @@
 <span class="p">)</span>
 </code></pre></div>
 
-<p>Short summary.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<p>Method to plot the frame.</p>
+<p>Parameters
+    ----------
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+    frame : numpy.ndarray
+        2D matrix representing an image.
+    width : int
+        Frame width.
+    height : int
+        Frame height.
+    images_to_overlay : list
+        List of images to overlay on top of the frame.
+=======
+    frame : type
+        Description of parameter <code>frame</code>.
+    width : Int
+        Frame width.
+    height : Int
+        Frame height.
+    images_to_overlay : List
+        List of frame to overlay.</p>
+<div class="codehilite"><pre><span></span><code><span class="gh">Returns</span>
+<span class="gh">-------</span>
+None
+</code></pre></div>
 
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>frame</td>
-<td>type</td>
-<td>Description of parameter <code>frame</code>.</td>
-
-</tr>
-<tr>
-<td>width</td>
-<td>type</td>
-<td>Description of parameter <code>width</code>.</td>
-
-</tr>
-<tr>
-<td>height</td>
-<td>type</td>
-<td>Description of parameter <code>height</code>.</td>
-
-</tr>
-<tr>
-<td>images_to_overlay</td>
-<td>type</td>
-<td>Description of parameter <code>images_to_overlay</code>.</td>
-
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>type</td>
-<td>Description of returned object.</td>
-</tr>
-</tbody>
-</table>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>babf6803825d127003e989374de11514beea5d59</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">plot_frame</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">224</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">224</span><span class="p">,</span> <span class="n">images_to_overlay</span><span class="o">=</span><span class="err">[]</span><span class="p">)</span><span class="o">:</span>
 
-    <span class="s2">&quot;</span><span class="se">&quot;&quot;</span><span class="s2">Short summary.</span>
+    <span class="s2">&quot;</span><span class="se">&quot;&quot;</span><span class="s2">Method to plot the frame.</span>
 
 <span class="s2">    Parameters</span>
 
 <span class="s2">    ----------</span>
 
+<span class="s2">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
+
+<span class="s2">    frame : numpy.ndarray</span>
+
+<span class="s2">        2D matrix representing an image.</span>
+
+<span class="s2">    width : int</span>
+
+<span class="s2">        Frame width.</span>
+
+<span class="s2">    height : int</span>
+
+<span class="s2">        Frame height.</span>
+
+<span class="s2">    images_to_overlay : list</span>
+
+<span class="s2">        List of images to overlay on top of the frame.</span>
+
+<span class="s2">=======</span>
+
 <span class="s2">    frame : type</span>
 
 <span class="s2">        Description of parameter `frame`.</span>
 
-<span class="s2">    width : type</span>
+<span class="s2">    width : Int</span>
 
-<span class="s2">        Description of parameter `width`.</span>
+<span class="s2">        Frame width.</span>
 
-<span class="s2">    height : type</span>
+<span class="s2">    height : Int</span>
 
-<span class="s2">        Description of parameter `height`.</span>
+<span class="s2">        Frame height.</span>
 
-<span class="s2">    images_to_overlay : type</span>
+<span class="s2">    images_to_overlay : List</span>
 
-<span class="s2">        Description of parameter `images_to_overlay`.</span>
+<span class="s2">        List of frame to overlay.</span>
 
 <span class="s2">    Returns</span>
 
 <span class="s2">    -------</span>
 
-<span class="s2">    type</span>
+<span class="s2">    None</span>
 
-<span class="s2">        Description of returned object.</span>
+<span class="s2">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="s2">    </span><span class="se">&quot;&quot;</span><span class="s2">&quot;</span>
 

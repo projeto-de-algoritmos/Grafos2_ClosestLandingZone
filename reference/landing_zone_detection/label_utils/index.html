@@ -462,23 +462,41 @@
 
 <span class="n">def</span> <span class="n">can_uav_land</span><span class="p">(</span><span class="n">label</span><span class="p">)</span><span class="o">:</span>
 
-    <span class="s2">&quot;</span><span class="se">&quot;&quot;</span><span class="s2">Short summary.</span>
+    <span class="s2">&quot;</span><span class="se">&quot;&quot;</span><span class="s2">Checks if an UAV can reach a position labelled with &quot;</span><span class="n">label</span><span class="s2">&quot;.</span>
 
 <span class="s2">    Parameters</span>
 
 <span class="s2">    ----------</span>
 
-<span class="s2">    label : type</span>
+<span class="s2">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
 
-<span class="s2">        Description of parameter `label`.</span>
+<span class="s2">    label : int</span>
+
+<span class="s2">        Label of a position in the image.</span>
 
 <span class="s2">    Returns</span>
 
 <span class="s2">    -------</span>
 
-<span class="s2">    type</span>
+<span class="s2">    boolean</span>
 
-<span class="s2">        Description of returned object.</span>
+<span class="s2">        Whether an UAV can reach a position labelled with &quot;</span><span class="n">label</span><span class="s2">&quot;.</span>
+
+<span class="s2">=======</span>
+
+<span class="s2">    label : Int, default=Required</span>
+
+<span class="s2">        .</span>
+
+<span class="s2">    Returns</span>
+
+<span class="s2">    -------</span>
+
+<span class="s2">    Boolean</span>
+
+<span class="s2">        Boolean that indicates if a person can reach the frame.</span>
+
+<span class="s2">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="s2">    </span><span class="se">&quot;&quot;</span><span class="s2">&quot;</span>
 
@@ -486,13 +504,29 @@
 
 <span class="n">def</span> <span class="n">can_a_person_reach</span><span class="p">(</span><span class="n">label</span><span class="p">)</span><span class="o">:</span>
 
-    <span class="s2">&quot;</span><span class="se">&quot;&quot;</span><span class="s2">Short summary.</span>
+    <span class="s2">&quot;</span><span class="se">&quot;&quot;</span><span class="s2">Checks if a person can reach a position labelled with &quot;</span><span class="n">label</span><span class="s2">&quot;.</span>
 
 <span class="s2">    Parameters</span>
 
 <span class="s2">    ----------</span>
 
-<span class="s2">    label : type</span>
+<span class="s2">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
+
+<span class="s2">    label : int</span>
+
+<span class="s2">        Label of a position in the image.</span>
+
+<span class="s2">    Returns</span>
+
+<span class="s2">    -------</span>
+
+<span class="s2">    bool</span>
+
+<span class="s2">        Whether a person can reach a position labelled with &quot;</span><span class="n">label</span><span class="s2">&quot;.</span>
+
+<span class="s2">=======</span>
+
+<span class="s2">    label : Int, default=Required</span>
 
 <span class="s2">        Description of parameter `label`.</span>
 
@@ -500,9 +534,11 @@
 
 <span class="s2">    -------</span>
 
-<span class="s2">    type</span>
+<span class="s2">    Boolean</span>
 
-<span class="s2">        Description of returned object.</span>
+<span class="s2">        Boolean that indicates if a porsan can reach the frame.</span>
+
+<span class="s2">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="s2">    </span><span class="se">&quot;&quot;</span><span class="s2">&quot;</span>
 
@@ -529,50 +565,67 @@
 <span class="p">)</span>
 </code></pre></div>
 
-<p>Short summary.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<p>Checks if a person can reach a position labelled with "label".</p>
+<p>Parameters
+    ----------
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+    label : int
+        Label of a position in the image.</p>
+<div class="codehilite"><pre><span></span><code><span class="gh">Returns</span>
+<span class="gh">-------</span>
+bool
+    Whether a person can reach a position labelled with &quot;label&quot;.
+</code></pre></div>
 
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>label</td>
-<td>type</td>
-<td>Description of parameter <code>label</code>.</td>
+<p>=======
+    label : Int, default=Required
+        Description of parameter <code>label</code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="gh">Returns</span>
+<span class="gh">-------</span>
+Boolean
+    Boolean that indicates if a porsan can reach the frame.
+</code></pre></div>
 
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>type</td>
-<td>Description of returned object.</td>
-</tr>
-</tbody>
-</table>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>babf6803825d127003e989374de11514beea5d59</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">can_a_person_reach</span><span class="p">(</span><span class="n">label</span><span class="p">)</span><span class="o">:</span>
 
-    <span class="s2">&quot;</span><span class="se">&quot;&quot;</span><span class="s2">Short summary.</span>
+    <span class="s2">&quot;</span><span class="se">&quot;&quot;</span><span class="s2">Checks if a person can reach a position labelled with &quot;</span><span class="n">label</span><span class="s2">&quot;.</span>
 
 <span class="s2">    Parameters</span>
 
 <span class="s2">    ----------</span>
 
-<span class="s2">    label : type</span>
+<span class="s2">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
+
+<span class="s2">    label : int</span>
+
+<span class="s2">        Label of a position in the image.</span>
+
+<span class="s2">    Returns</span>
+
+<span class="s2">    -------</span>
+
+<span class="s2">    bool</span>
+
+<span class="s2">        Whether a person can reach a position labelled with &quot;</span><span class="n">label</span><span class="s2">&quot;.</span>
+
+<span class="s2">=======</span>
+
+<span class="s2">    label : Int, default=Required</span>
 
 <span class="s2">        Description of parameter `label`.</span>
 
@@ -580,9 +633,11 @@
 
 <span class="s2">    -------</span>
 
-<span class="s2">    type</span>
+<span class="s2">    Boolean</span>
 
-<span class="s2">        Description of returned object.</span>
+<span class="s2">        Boolean that indicates if a porsan can reach the frame.</span>
+
+<span class="s2">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="s2">    </span><span class="se">&quot;&quot;</span><span class="s2">&quot;</span>
 
@@ -598,62 +653,81 @@
 <span class="p">)</span>
 </code></pre></div>
 
-<p>Short summary.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<p>Checks if an UAV can reach a position labelled with "label".</p>
+<p>Parameters
+    ----------
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+    label : int
+        Label of a position in the image.</p>
+<div class="codehilite"><pre><span></span><code><span class="gh">Returns</span>
+<span class="gh">-------</span>
+boolean
+    Whether an UAV can reach a position labelled with &quot;label&quot;.
+</code></pre></div>
 
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>label</td>
-<td>type</td>
-<td>Description of parameter <code>label</code>.</td>
+<p>=======
+    label : Int, default=Required
+        .</p>
+<div class="codehilite"><pre><span></span><code><span class="gh">Returns</span>
+<span class="gh">-------</span>
+Boolean
+    Boolean that indicates if a person can reach the frame.
+</code></pre></div>
 
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>type</td>
-<td>Description of returned object.</td>
-</tr>
-</tbody>
-</table>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">can_uav_land</span><span class="p">(</span><span class="n">label</span><span class="p">)</span><span class="o">:</span>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>babf6803825d127003e989374de11514beea5d59</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">can_uav_land</span><span class="p">(</span><span class="n">label</span><span class="p">):</span>
 
-    <span class="s2">&quot;</span><span class="se">&quot;&quot;</span><span class="s2">Short summary.</span>
+    <span class="ss">&quot;&quot;&quot;Checks if an UAV can reach a position labelled with &quot;</span><span class="n">label</span><span class="ss">&quot;.</span>
 
-<span class="s2">    Parameters</span>
+<span class="ss">    Parameters</span>
 
-<span class="s2">    ----------</span>
+<span class="ss">    ----------</span>
 
-<span class="s2">    label : type</span>
+<span class="ss">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
 
-<span class="s2">        Description of parameter `label`.</span>
+<span class="ss">    label : int</span>
 
-<span class="s2">    Returns</span>
+<span class="ss">        Label of a position in the image.</span>
 
-<span class="s2">    -------</span>
+<span class="ss">    Returns</span>
 
-<span class="s2">    type</span>
+<span class="ss">    -------</span>
 
-<span class="s2">        Description of returned object.</span>
+<span class="ss">    boolean</span>
 
-<span class="s2">    </span><span class="se">&quot;&quot;</span><span class="s2">&quot;</span>
+<span class="ss">        Whether an UAV can reach a position labelled with &quot;</span><span class="n">label</span><span class="ss">&quot;.</span>
+
+<span class="ss">=======</span>
+
+<span class="ss">    label : Int, default=Required</span>
+
+<span class="ss">        .</span>
+
+<span class="ss">    Returns</span>
+
+<span class="ss">    -------</span>
+
+<span class="ss">    Boolean</span>
+
+<span class="ss">        Boolean that indicates if a person can reach the frame.</span>
+
+<span class="ss">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
+
+<span class="ss">    &quot;&quot;&quot;</span>
 
     <span class="k">return</span> <span class="n">label</span> <span class="o">==</span> <span class="n">UAV_CAN_LAND_PERSON_CAN_REACH</span>
 </code></pre></div>

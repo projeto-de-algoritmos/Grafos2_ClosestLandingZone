@@ -5,74 +5,74 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-
+    
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
-
-
-
+      
+      
+      
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.14">
-
-
-
+    
+    
+      
         <title>Data - Grafos2_ClosestLandingZone</title>
-
-
-
+      
+    
+    
       <link rel="stylesheet" href="../../../assets/stylesheets/main.d3202873.min.css">
-
+      
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ff0a5ce4.min.css">
-
-
-
-
+      
+      
+        
+        
         <meta name="theme-color" content="#4cae4f">
-
-
-
-
-
+      
+    
+    
+    
+      
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
-
-
-
-
-
-
-
-
+      
+    
+    
+    
+    
+      
+    
+    
   </head>
-
-
-
-
-
+  
+  
+    
+    
+    
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent="lightgreen">
-
-
+  
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
-
-
+      
+        
         <a href="#module-landing_zone_detectiondata" class="md-skip">
           Skip to content
         </a>
-
+      
     </div>
     <div data-md-component="announce">
-
+      
     </div>
-
+    
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="../../.." title="Grafos2_ClosestLandingZone" class="md-header-nav__button md-logo" aria-label="Grafos2_ClosestLandingZone">
-
-
+      
+  
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
@@ -80,24 +80,24 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
     <div class="md-header-nav__title" data-md-component="header-title">
-
+      
         <div class="md-header-nav__ellipsis">
           <span class="md-header-nav__topic md-ellipsis">
             Grafos2_ClosestLandingZone
           </span>
           <span class="md-header-nav__topic md-ellipsis">
-
+            
               Data
-
+            
           </span>
         </div>
-
+      
     </div>
-
+    
       <label class="md-header-nav__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
-
+      
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -123,13 +123,13 @@
     </div>
   </div>
 </div>
-
-
+    
+    
       <div class="md-header-nav__source">
-
+        
 <a href="https://github.com/projeto-de-algoritmos/Grafos2_ClosestLandingZone/" title="Go to repository" class="md-source">
   <div class="md-source__icon md-icon">
-
+    
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
@@ -137,40 +137,40 @@
   </div>
 </a>
       </div>
-
+    
   </nav>
 </header>
-
+    
     <div class="md-container" data-md-component="container">
-
-
-
-
-
-
+      
+        
+      
+      
+        
+      
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
-
-
+          
+            
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Grafos2_ClosestLandingZone" class="md-nav__button md-logo" aria-label="Grafos2_ClosestLandingZone">
-
-
+      
+  
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
     Grafos2_ClosestLandingZone
   </label>
-
+  
     <div class="md-nav__source">
-
+      
 <a href="https://github.com/projeto-de-algoritmos/Grafos2_ClosestLandingZone/" title="Go to repository" class="md-source">
   <div class="md-source__icon md-icon">
-
+    
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
@@ -178,12 +178,12 @@
   </div>
 </a>
     </div>
-
+  
   <ul class="md-nav__list" data-md-scrollfix>
-
-
-
-
+    
+      
+      
+      
 
 
   <li class="md-nav__item">
@@ -192,18 +192,18 @@
     </a>
   </li>
 
+    
+      
+      
+      
 
-
-
-
-
-
+  
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-
+    
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
-
+    
     <label class="md-nav__link" for="nav-2">
       Reference
       <span class="md-nav__icon md-icon"></span>
@@ -214,19 +214,19 @@
         Reference
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
 
-
-
-
-
-
-
+  
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-
+    
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
-
+    
     <label class="md-nav__link" for="nav-2-1">
       Landing Zone Detection
       <span class="md-nav__icon md-icon"></span>
@@ -237,135 +237,115 @@
         Landing Zone Detection
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
 
-
-
-
-
-
-
+  
 
 
   <li class="md-nav__item md-nav__item--active">
-
+    
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-
-
-
-
+    
+      
+    
+    
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Data
         <span class="md-nav__icon md-icon"></span>
       </label>
-
+    
     <a href="./" title="Data" class="md-nav__link md-nav__link--active">
       Data
     </a>
-
-
+    
+      
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-
-
-
-
-
+  
+  
+    
+  
+  
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
-
+      
         <li class="md-nav__item">
   <a href="#variables" class="md-nav__link">
     Variables
   </a>
-
+  
 </li>
-
+      
         <li class="md-nav__item">
   <a href="#classes" class="md-nav__link">
     Classes
   </a>
-
+  
     <nav class="md-nav" aria-label="Classes">
       <ul class="md-nav__list">
-
+        
           <li class="md-nav__item">
   <a href="#aerialimagedata" class="md-nav__link">
     AerialImageData
   </a>
-
-    <nav class="md-nav" aria-label="AerialImageData">
-      <ul class="md-nav__list">
-
-          <li class="md-nav__item">
-  <a href="#attributes" class="md-nav__link">
-    Attributes
-  </a>
-
+  
 </li>
-
-      </ul>
-    </nav>
-
-</li>
-
+        
           <li class="md-nav__item">
   <a href="#randomaerialimagedatagenerator" class="md-nav__link">
     RandomAerialImageDataGenerator
   </a>
-
+  
     <nav class="md-nav" aria-label="RandomAerialImageDataGenerator">
       <ul class="md-nav__list">
-
-          <li class="md-nav__item">
-  <a href="#attributes_1" class="md-nav__link">
-    Attributes
-  </a>
-
-</li>
-
+        
           <li class="md-nav__item">
   <a href="#methods" class="md-nav__link">
     Methods
   </a>
-
+  
 </li>
-
+        
           <li class="md-nav__item">
   <a href="#generate" class="md-nav__link">
     generate
   </a>
-
+  
 </li>
-
+        
           <li class="md-nav__item">
   <a href="#load_img_items" class="md-nav__link">
     load_img_items
   </a>
-
+  
 </li>
-
+        
       </ul>
     </nav>
-
+  
 </li>
-
+        
       </ul>
     </nav>
-
+  
 </li>
-
+      
     </ul>
-
+  
 </nav>
-
+    
   </li>
 
-
-
-
-
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -374,10 +354,10 @@
     </a>
   </li>
 
-
-
-
-
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -386,10 +366,10 @@
     </a>
   </li>
 
-
-
-
-
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -398,10 +378,10 @@
     </a>
   </li>
 
-
-
-
-
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -410,141 +390,121 @@
     </a>
   </li>
 
-
+        
       </ul>
     </nav>
   </li>
 
-
+        
       </ul>
     </nav>
   </li>
 
-
+    
   </ul>
 </nav>
                   </div>
                 </div>
               </div>
-
-
+            
+            
               <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-
+                    
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-
-
-
-
-
+  
+  
+    
+  
+  
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
-
+      
         <li class="md-nav__item">
   <a href="#variables" class="md-nav__link">
     Variables
   </a>
-
+  
 </li>
-
+      
         <li class="md-nav__item">
   <a href="#classes" class="md-nav__link">
     Classes
   </a>
-
+  
     <nav class="md-nav" aria-label="Classes">
       <ul class="md-nav__list">
-
+        
           <li class="md-nav__item">
   <a href="#aerialimagedata" class="md-nav__link">
     AerialImageData
   </a>
-
-    <nav class="md-nav" aria-label="AerialImageData">
-      <ul class="md-nav__list">
-
-          <li class="md-nav__item">
-  <a href="#attributes" class="md-nav__link">
-    Attributes
-  </a>
-
+  
 </li>
-
-      </ul>
-    </nav>
-
-</li>
-
+        
           <li class="md-nav__item">
   <a href="#randomaerialimagedatagenerator" class="md-nav__link">
     RandomAerialImageDataGenerator
   </a>
-
+  
     <nav class="md-nav" aria-label="RandomAerialImageDataGenerator">
       <ul class="md-nav__list">
-
-          <li class="md-nav__item">
-  <a href="#attributes_1" class="md-nav__link">
-    Attributes
-  </a>
-
-</li>
-
+        
           <li class="md-nav__item">
   <a href="#methods" class="md-nav__link">
     Methods
   </a>
-
+  
 </li>
-
+        
           <li class="md-nav__item">
   <a href="#generate" class="md-nav__link">
     generate
   </a>
-
+  
 </li>
-
+        
           <li class="md-nav__item">
   <a href="#load_img_items" class="md-nav__link">
     load_img_items
   </a>
-
+  
 </li>
-
+        
       </ul>
     </nav>
-
+  
 </li>
-
+        
       </ul>
     </nav>
-
+  
 </li>
-
+      
     </ul>
-
+  
 </nav>
                   </div>
                 </div>
               </div>
-
-
+            
+          
           <div class="md-content">
             <article class="md-content__inner md-typeset">
-
-
+              
+                
                   <a href="https://github.com/projeto-de-algoritmos/Grafos2_ClosestLandingZone/edit/master/reference/landing_zone_detection/data.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
-
-
-
-
-
+                
+                
+                  
+                
+                
                 <h1 id="module-landing_zone_detectiondata">Module landing_zone_detection.data</h1>
 <p>None</p>
 <p>None</p>
@@ -558,27 +518,49 @@
 
 <span class="k">class</span> <span class="nc">AerialImageData</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-    <span class="sd">&quot;&quot;&quot;Short summary.</span>
+    <span class="sd">&quot;&quot;&quot;Aerial image and its surrounding data.</span>
 
 <span class="sd">    Parameters</span>
 
 <span class="sd">    ----------</span>
 
-<span class="sd">    frame : type</span>
+<span class="sd">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
 
-<span class="sd">        Description of parameter `frame`.</span>
+<span class="sd">    frame : numpy.ndarray</span>
 
-<span class="sd">    adj_matrix : type</span>
+<span class="sd">        Frame (image) taken by the flying UAV.</span>
 
-<span class="sd">        Description of parameter `adj_matrix`.</span>
+<span class="sd">    adj_matrix : numpy.ndarray</span>
 
-<span class="sd">    height_map : type</span>
+<span class="sd">        Adjacent matrix where the meaning of each value is specified in the label_utils.py module.</span>
 
-<span class="sd">        Description of parameter `height_map`.</span>
+<span class="sd">    height_map : numpy.ndarray</span>
 
-<span class="sd">    person_coord : type</span>
+<span class="sd">        Depth estimation of the frame. Same shape as the adj_matrix.</span>
 
-<span class="sd">        Description of parameter `person_coord`.</span>
+<span class="sd">    person_coord : list</span>
+
+<span class="sd">        (x, y) coordinate of a person in the adj_matrix. This is the person who&#39;s supposed to receive the UAV.</span>
+
+<span class="sd">=======</span>
+
+<span class="sd">    frame : np.empty, deafult=Required</span>
+
+<span class="sd">        np.empty representing a image.</span>
+
+<span class="sd">    adj_matrix : np.empty, deafult=Required</span>
+
+<span class="sd">        np.empty representing a adj_matrix.</span>
+
+<span class="sd">    height_map : np.empty, deafult=Required</span>
+
+<span class="sd">        np.empty representing a adj_matrix.</span>
+
+<span class="sd">    person_coord : List, deafult=Required</span>
+
+<span class="sd">        List with x and y that represents the person coordenate.</span>
+
+<span class="sd">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -714,59 +696,113 @@
 
 <span class="k">class</span> <span class="nc">RandomAerialImageDataGenerator</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-    <span class="sd">&quot;&quot;&quot;Short summary.</span>
+    <span class="sd">&quot;&quot;&quot;Class to generate random AerialImageData object using the given terrain and person options.</span>
 
 <span class="sd">    Parameters</span>
 
 <span class="sd">    ----------</span>
 
-<span class="sd">    width : type</span>
+<span class="sd">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
 
-<span class="sd">        Description of parameter `width`.</span>
+<span class="sd">    width : int</span>
 
-<span class="sd">    height : type</span>
+<span class="sd">        Image width.</span>
 
-<span class="sd">        Description of parameter `height`.</span>
+<span class="sd">    height : int</span>
 
-<span class="sd">    channels : type</span>
+<span class="sd">        Image  height.</span>
+
+<span class="sd">    channels : int</span>
+
+<span class="sd">        Number of channels in the image.</span>
+
+<span class="sd">    dtype : np.uint8</span>
+
+<span class="sd">        Data type of the frame.</span>
+
+<span class="sd">    col_size : int</span>
+
+<span class="sd">        Width of each adj_matrix (or height_map) item.</span>
+
+<span class="sd">    row_size : int</span>
+
+<span class="sd">        Height of each adj_matrix (or height_map) item.</span>
+
+<span class="sd">    terrain_options_images : list</span>
+
+<span class="sd">        Each item of the image can randomly assume one of this images.</span>
+
+<span class="sd">    terrain_options_labels : list</span>
+
+<span class="sd">        Labels of each option in terrain_options_images.</span>
+
+<span class="sd">    terrain_options_heights : list</span>
+
+<span class="sd">        Estimated depth (height from the drone to the ground) of each option in terrain_options_images.</span>
+
+<span class="sd">    person_options_images : list</span>
+
+<span class="sd">        Until now, only one random item of the image can assume one of this images. In other words: only one person per image.</span>
+
+<span class="sd">    person_options_labels : list</span>
+
+<span class="sd">        Labels of each person_options in person_options_images.</span>
+
+<span class="sd">    person_options_heights : list</span>
+
+<span class="sd">        Estimated depth (height from the drone to the ground) of each option in person_options_images.</span>
+
+<span class="sd">=======</span>
+
+<span class="sd">    width : Int, default=224</span>
+
+<span class="sd">        Image width.</span>
+
+<span class="sd">    height : Int, default=224</span>
+
+<span class="sd">        Image  height&#39;.</span>
+
+<span class="sd">    channels : Int, default=3</span>
 
 <span class="sd">        Description of parameter `channels`.</span>
 
-<span class="sd">    dtype : type</span>
+<span class="sd">    dtype : np.uint8, default=np.uint8</span>
 
-<span class="sd">        Description of parameter `dtype`.</span>
+<span class="sd">        Data type of frame.</span>
 
-<span class="sd">    col_size : type</span>
+<span class="sd">    col_size : Int, default=32</span>
 
-<span class="sd">        Description of parameter `col_size`.</span>
+<span class="sd">        column size`.</span>
 
-<span class="sd">    row_size : type</span>
+<span class="sd">    row_size : Int, default=32</span>
 
-<span class="sd">        Description of parameter `row_size`.</span>
+<span class="sd">        Row size`.</span>
 
-<span class="sd">    terrain_options_images : type</span>
+<span class="sd">    terrain_options_images : List, default=terrain_options_images</span>
 
-<span class="sd">        Description of parameter `terrain_options_images`.</span>
+<span class="sd">        List of terrain images.</span>
 
-<span class="sd">    terrain_options_labels : type</span>
+<span class="sd">    terrain_options_labels : List, default=terrain_options_labels</span>
 
-<span class="sd">        Description of parameter `terrain_options_labels`.</span>
+<span class="sd">        List of terrain options labels`.</span>
 
-<span class="sd">    terrain_options_heights : type</span>
+<span class="sd">    terrain_options_heights : List, default=terrain_options_heights</span>
 
-<span class="sd">        Description of parameter `terrain_options_heights`.</span>
+<span class="sd">        List of terrain options heights.</span>
 
-<span class="sd">    person_options_images : type</span>
+<span class="sd">    person_options_images : List, default=person_options_images</span>
 
-<span class="sd">        Description of parameter `person_options_images`.</span>
+<span class="sd">        List of person images.</span>
 
-<span class="sd">    person_options_labels : type</span>
+<span class="sd">    person_options_labels : List, default=person_options_labels</span>
 
-<span class="sd">        Description of parameter `person_options_labels`.</span>
+<span class="sd">        List of person options images labels.</span>
 
-<span class="sd">    person_options_heights : type</span>
+<span class="sd">    person_options_heights : List, default=person_options_heights</span>
 
-<span class="sd">        Description of parameter `person_options_heights`.</span>
+<span class="sd">        List of person options heights.</span>
+
+<span class="sd">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="sd">    Attributes</span>
 
@@ -774,15 +810,11 @@
 
 <span class="sd">    num_cols : type</span>
 
-<span class="sd">        Description of attribute `num_cols`.</span>
+<span class="sd">        Number of columns in each adj_matrix (or height_map) item.</span>
 
 <span class="sd">    num_rows : type</span>
 
-<span class="sd">        Description of attribute `num_rows`.</span>
-
-<span class="sd">    load_img_items : type</span>
-
-<span class="sd">        Description of attribute `load_img_items`.</span>
+<span class="sd">        Number of rows in each adj_matrix (or height_map) item.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -844,19 +876,39 @@
 
     <span class="k">def</span> <span class="nf">__read_img_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 
-        <span class="sd">&quot;&quot;&quot;Short summary.</span>
+        <span class="sd">&quot;&quot;&quot;Read an image item from filename.</span>
 
 <span class="sd">        Parameters</span>
 
 <span class="sd">        ----------</span>
 
-<span class="sd">        filename : type</span>
+<span class="sd">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
 
-<span class="sd">            Description of parameter `filename`.</span>
+<span class="sd">        filename : str</span>
 
-<span class="sd">        **kwargs : type</span>
+<span class="sd">            File path.</span>
 
-<span class="sd">            Description of parameter `**kwargs`.</span>
+<span class="sd">        **kwargs : dict</span>
+
+<span class="sd">            **kwargs.</span>
+
+<span class="sd">        Returns</span>
+
+<span class="sd">        -------</span>
+
+<span class="sd">        numpy.ndarray</span>
+
+<span class="sd">            2D matrix representing an image.</span>
+
+<span class="sd">=======</span>
+
+<span class="sd">        filename : type, default=Required</span>
+
+<span class="sd">            File path.</span>
+
+<span class="sd">        **kwargs : Any, deafult=Automatically Determined</span>
+
+<span class="sd">            `**kwargs`.</span>
 
 <span class="sd">        Returns</span>
 
@@ -864,7 +916,9 @@
 
 <span class="sd">        type</span>
 
-<span class="sd">            Description of returned object.</span>
+<span class="sd">            Open image.</span>
+
+<span class="sd">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
 
@@ -880,23 +934,47 @@
 
                           <span class="n">resize_method</span><span class="o">=</span><span class="n">cv2</span><span class="o">.</span><span class="n">INTER_LINEAR</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 
-        <span class="sd">&quot;&quot;&quot;Short summary.</span>
+        <span class="sd">&quot;&quot;&quot;Resize an image item.</span>
 
 <span class="sd">        Parameters</span>
 
 <span class="sd">        ----------</span>
 
-<span class="sd">        img_item : type</span>
+<span class="sd">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
 
-<span class="sd">            Description of parameter `img_item`.</span>
+<span class="sd">        img_item : numpy.ndarray</span>
 
-<span class="sd">        resize_method : type</span>
+<span class="sd">            2D matrix representing an image.</span>
 
-<span class="sd">            Description of parameter `resize_method`.</span>
+<span class="sd">        resize_method : int</span>
+
+<span class="sd">            Type of the resize method i.e cv2.INTER_LINEAR.</span>
+
+<span class="sd">        **kwargs : dict</span>
+
+<span class="sd">            **kwargs</span>
+
+<span class="sd">        Returns</span>
+
+<span class="sd">        -------</span>
+
+<span class="sd">        numpy.ndarray</span>
+
+<span class="sd">            Resized image.</span>
+
+<span class="sd">=======</span>
+
+<span class="sd">        img_item : Bytes</span>
+
+<span class="sd">            Open image.</span>
+
+<span class="sd">        resize_method : method, default=cv2.INTER_LINEAR,</span>
+
+<span class="sd">            Type of resize method.</span>
 
 <span class="sd">        **kwargs : type</span>
 
-<span class="sd">            Description of parameter `**kwargs`.</span>
+<span class="sd">            **kwargs`</span>
 
 <span class="sd">        Returns</span>
 
@@ -904,7 +982,9 @@
 
 <span class="sd">        type</span>
 
-<span class="sd">            Description of returned object.</span>
+<span class="sd">            Risezed image.</span>
+
+<span class="sd">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
 
@@ -922,15 +1002,31 @@
 
     <span class="k">def</span> <span class="nf">load_img_items</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img_items</span><span class="p">):</span>
 
-        <span class="sd">&quot;&quot;&quot;Short summary.</span>
+        <span class="sd">&quot;&quot;&quot;Read and transform a list of image items.</span>
 
 <span class="sd">        Parameters</span>
 
 <span class="sd">        ----------</span>
 
-<span class="sd">        img_items : type</span>
+<span class="sd">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
 
-<span class="sd">            Description of parameter `img_items`.</span>
+<span class="sd">        img_items : list</span>
+
+<span class="sd">            List of paths, or list of numpy.ndarrays.</span>
+
+<span class="sd">        Returns</span>
+
+<span class="sd">        -------</span>
+
+<span class="sd">        list</span>
+
+<span class="sd">            List of the transformed images.</span>
+
+<span class="sd">=======</span>
+
+<span class="sd">        img_items : List</span>
+
+<span class="sd">            List of images.</span>
 
 <span class="sd">        Returns</span>
 
@@ -938,7 +1034,9 @@
 
 <span class="sd">        type</span>
 
-<span class="sd">            Description of returned object.</span>
+<span class="sd">            List of risezed images.</span>
+
+<span class="sd">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
 
@@ -960,15 +1058,25 @@
 
     <span class="k">def</span> <span class="nf">generate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
-        <span class="sd">&quot;&quot;&quot;Short summary.</span>
+        <span class="sd">&quot;&quot;&quot;Generates a random AerialImageData object using the given terrain and person options.</span>
 
 <span class="sd">        Returns</span>
 
 <span class="sd">        -------</span>
 
+<span class="sd">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
+
+<span class="sd">        AerialImageData</span>
+
+<span class="sd">            Aerial image and its surrounding data.</span>
+
+<span class="sd">=======</span>
+
 <span class="sd">        type</span>
 
-<span class="sd">            Description of returned object.</span>
+<span class="sd">            Dict.</span>
+
+<span class="sd">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
 
@@ -1108,76 +1216,65 @@
 <span class="p">)</span>
 </code></pre></div>
 
-<h4 id="attributes">Attributes</h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>frame</td>
-<td>type</td>
-<td>Description of parameter <code>frame</code>.</td>
-</tr>
-<tr>
-<td>adj_matrix</td>
-<td>type</td>
-<td>Description of parameter <code>adj_matrix</code>.</td>
-</tr>
-<tr>
-<td>height_map</td>
-<td>type</td>
-<td>Description of parameter <code>height_map</code>.</td>
-</tr>
-<tr>
-<td>person_coord</td>
-<td>type</td>
-<td>Description of parameter <code>person_coord</code>.</td>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="n">AerialImageData</span>(<span class="n">object</span>):
 
-</tr>
-</tbody>
-</table>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">class</span> <span class="n">AerialImageData</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
+    <span class="s">&quot;&quot;&quot;Aerial image and its surrounding data.</span>
 
-    <span class="s2">&quot;</span><span class="se">&quot;&quot;</span><span class="s2">Short summary.</span>
+<span class="s">    Parameters</span>
 
-<span class="s2">    Parameters</span>
+<span class="s">    ----------</span>
 
-<span class="s2">    ----------</span>
+<span class="s">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
 
-<span class="s2">    frame : type</span>
+<span class="s">    frame : numpy.ndarray</span>
 
-<span class="s2">        Description of parameter `frame`.</span>
+<span class="s">        Frame (image) taken by the flying UAV.</span>
 
-<span class="s2">    adj_matrix : type</span>
+<span class="s">    adj_matrix : numpy.ndarray</span>
 
-<span class="s2">        Description of parameter `adj_matrix`.</span>
+<span class="s">        Adjacent matrix where the meaning of each value is specified in the label_utils.py module.</span>
 
-<span class="s2">    height_map : type</span>
+<span class="s">    height_map : numpy.ndarray</span>
 
-<span class="s2">        Description of parameter `height_map`.</span>
+<span class="s">        Depth estimation of the frame. Same shape as the adj_matrix.</span>
 
-<span class="s2">    person_coord : type</span>
+<span class="s">    person_coord : list</span>
 
-<span class="s2">        Description of parameter `person_coord`.</span>
+<span class="s">        (x, y) coordinate of a person in the adj_matrix. This is the person who&#39;s supposed to receive the UAV.</span>
 
-<span class="s2">    </span><span class="se">&quot;&quot;</span><span class="s2">&quot;</span>
+<span class="s">=======</span>
 
-    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="k">None</span><span class="p">,</span> <span class="n">adj_matrix</span><span class="o">=</span><span class="k">None</span><span class="p">,</span> <span class="n">height_map</span><span class="o">=</span><span class="k">None</span><span class="p">,</span>
+<span class="s">    frame : np.empty, deafult=Required</span>
 
-                 <span class="n">person_coord</span><span class="o">=</span><span class="k">None</span><span class="p">)</span><span class="o">:</span>
+<span class="s">        np.empty representing a image.</span>
 
-        <span class="n">self</span><span class="p">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">frame</span>
+<span class="s">    adj_matrix : np.empty, deafult=Required</span>
 
-        <span class="n">self</span><span class="p">.</span><span class="n">adj_matrix</span> <span class="o">=</span> <span class="n">adj_matrix</span>
+<span class="s">        np.empty representing a adj_matrix.</span>
 
-        <span class="n">self</span><span class="p">.</span><span class="n">height_map</span> <span class="o">=</span> <span class="n">height_map</span>
+<span class="s">    height_map : np.empty, deafult=Required</span>
 
-        <span class="n">self</span><span class="p">.</span><span class="n">person_coord</span> <span class="o">=</span> <span class="n">person_coord</span>
+<span class="s">        np.empty representing a adj_matrix.</span>
+
+<span class="s">    person_coord : List, deafult=Required</span>
+
+<span class="s">        List with x and y that represents the person coordenate.</span>
+
+<span class="s">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
+
+<span class="s">    &quot;&quot;&quot;</span>
+
+    <span class="n">def</span> <span class="n">__init__</span>(<span class="nb">self</span>, <span class="n">frame</span>=<span class="n">None</span>, <span class="n">adj_matrix</span>=<span class="n">None</span>, <span class="n">height_map</span>=<span class="n">None</span>,
+
+                 <span class="n">person_coord</span>=<span class="n">None</span>):
+
+        <span class="nb">self</span>.<span class="n">frame</span> = <span class="n">frame</span>
+
+        <span class="nb">self</span>.<span class="n">adj_matrix</span> = <span class="n">adj_matrix</span>
+
+        <span class="nb">self</span>.<span class="n">height_map</span> = <span class="n">height_map</span>
+
+        <span class="nb">self</span>.<span class="n">person_coord</span> = <span class="n">person_coord</span>
 </code></pre></div>
 
 </details>
@@ -1199,164 +1296,115 @@
 <span class="p">)</span>
 </code></pre></div>
 
-<h4 id="attributes_1">Attributes</h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>width</td>
-<td>type</td>
-<td>Description of parameter <code>width</code>.</td>
-
-</tr>
-<tr>
-<td>height</td>
-<td>type</td>
-<td>Description of parameter <code>height</code>.</td>
-
-</tr>
-<tr>
-<td>channels</td>
-<td>type</td>
-<td>Description of parameter <code>channels</code>.</td>
-
-</tr>
-<tr>
-<td>dtype</td>
-<td>type</td>
-<td>Description of parameter <code>dtype</code>.</td>
-
-</tr>
-<tr>
-<td>col_size</td>
-<td>type</td>
-<td>Description of parameter <code>col_size</code>.</td>
-
-</tr>
-<tr>
-<td>row_size</td>
-<td>type</td>
-<td>Description of parameter <code>row_size</code>.</td>
-
-</tr>
-<tr>
-<td>terrain_options_images</td>
-<td>type</td>
-<td>Description of parameter <code>terrain_options_images</code>.</td>
-
-</tr>
-<tr>
-<td>terrain_options_labels</td>
-<td>type</td>
-<td>Description of parameter <code>terrain_options_labels</code>.</td>
-
-</tr>
-<tr>
-<td>terrain_options_heights</td>
-<td>type</td>
-<td>Description of parameter <code>terrain_options_heights</code>.</td>
-
-</tr>
-<tr>
-<td>person_options_images</td>
-<td>type</td>
-<td>Description of parameter <code>person_options_images</code>.</td>
-
-</tr>
-<tr>
-<td>person_options_labels</td>
-<td>type</td>
-<td>Description of parameter <code>person_options_labels</code>.</td>
-
-</tr>
-<tr>
-<td>person_options_heights</td>
-<td>type</td>
-<td>Description of parameter <code>person_options_heights</code>.</td>
-
-</tr>
-<tr>
-<td>num_cols</td>
-<td>type</td>
-<td>Description of attribute <code>num_cols</code>.</td>
-
-</tr>
-<tr>
-<td>num_rows</td>
-<td>type</td>
-<td>Description of attribute <code>num_rows</code>.</td>
-
-</tr>
-<tr>
-<td>load_img_items</td>
-<td>type</td>
-<td>Description of attribute <code>load_img_items</code>.</td>
-
-</tr>
-</tbody>
-</table>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="n">RandomAerialImageDataGenerator</span><span class="p">(</span><span class="n">object</span><span class="p">):</span>
 
-    <span class="sd">&quot;&quot;&quot;Short summary.</span>
+    <span class="sd">&quot;&quot;&quot;Class to generate random AerialImageData object using the given terrain and person options.</span>
 
 <span class="sd">    Parameters</span>
 
 <span class="sd">    ----------</span>
 
-<span class="sd">    width : type</span>
+<span class="sd">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
 
-<span class="sd">        Description of parameter `width`.</span>
+<span class="sd">    width : int</span>
 
-<span class="sd">    height : type</span>
+<span class="sd">        Image width.</span>
 
-<span class="sd">        Description of parameter `height`.</span>
+<span class="sd">    height : int</span>
 
-<span class="sd">    channels : type</span>
+<span class="sd">        Image  height.</span>
+
+<span class="sd">    channels : int</span>
+
+<span class="sd">        Number of channels in the image.</span>
+
+<span class="sd">    dtype : np.uint8</span>
+
+<span class="sd">        Data type of the frame.</span>
+
+<span class="sd">    col_size : int</span>
+
+<span class="sd">        Width of each adj_matrix (or height_map) item.</span>
+
+<span class="sd">    row_size : int</span>
+
+<span class="sd">        Height of each adj_matrix (or height_map) item.</span>
+
+<span class="sd">    terrain_options_images : list</span>
+
+<span class="sd">        Each item of the image can randomly assume one of this images.</span>
+
+<span class="sd">    terrain_options_labels : list</span>
+
+<span class="sd">        Labels of each option in terrain_options_images.</span>
+
+<span class="sd">    terrain_options_heights : list</span>
+
+<span class="sd">        Estimated depth (height from the drone to the ground) of each option in terrain_options_images.</span>
+
+<span class="sd">    person_options_images : list</span>
+
+<span class="sd">        Until now, only one random item of the image can assume one of this images. In other words: only one person per image.</span>
+
+<span class="sd">    person_options_labels : list</span>
+
+<span class="sd">        Labels of each person_options in person_options_images.</span>
+
+<span class="sd">    person_options_heights : list</span>
+
+<span class="sd">        Estimated depth (height from the drone to the ground) of each option in person_options_images.</span>
+
+<span class="sd">=======</span>
+
+<span class="sd">    width : Int, default=224</span>
+
+<span class="sd">        Image width.</span>
+
+<span class="sd">    height : Int, default=224</span>
+
+<span class="sd">        Image  height&#39;.</span>
+
+<span class="sd">    channels : Int, default=3</span>
 
 <span class="sd">        Description of parameter `channels`.</span>
 
-<span class="sd">    dtype : type</span>
+<span class="sd">    dtype : np.uint8, default=np.uint8</span>
 
-<span class="sd">        Description of parameter `dtype`.</span>
+<span class="sd">        Data type of frame.</span>
 
-<span class="sd">    col_size : type</span>
+<span class="sd">    col_size : Int, default=32</span>
 
-<span class="sd">        Description of parameter `col_size`.</span>
+<span class="sd">        column size`.</span>
 
-<span class="sd">    row_size : type</span>
+<span class="sd">    row_size : Int, default=32</span>
 
-<span class="sd">        Description of parameter `row_size`.</span>
+<span class="sd">        Row size`.</span>
 
-<span class="sd">    terrain_options_images : type</span>
+<span class="sd">    terrain_options_images : List, default=terrain_options_images</span>
 
-<span class="sd">        Description of parameter `terrain_options_images`.</span>
+<span class="sd">        List of terrain images.</span>
 
-<span class="sd">    terrain_options_labels : type</span>
+<span class="sd">    terrain_options_labels : List, default=terrain_options_labels</span>
 
-<span class="sd">        Description of parameter `terrain_options_labels`.</span>
+<span class="sd">        List of terrain options labels`.</span>
 
-<span class="sd">    terrain_options_heights : type</span>
+<span class="sd">    terrain_options_heights : List, default=terrain_options_heights</span>
 
-<span class="sd">        Description of parameter `terrain_options_heights`.</span>
+<span class="sd">        List of terrain options heights.</span>
 
-<span class="sd">    person_options_images : type</span>
+<span class="sd">    person_options_images : List, default=person_options_images</span>
 
-<span class="sd">        Description of parameter `person_options_images`.</span>
+<span class="sd">        List of person images.</span>
 
-<span class="sd">    person_options_labels : type</span>
+<span class="sd">    person_options_labels : List, default=person_options_labels</span>
 
-<span class="sd">        Description of parameter `person_options_labels`.</span>
+<span class="sd">        List of person options images labels.</span>
 
-<span class="sd">    person_options_heights : type</span>
+<span class="sd">    person_options_heights : List, default=person_options_heights</span>
 
-<span class="sd">        Description of parameter `person_options_heights`.</span>
+<span class="sd">        List of person options heights.</span>
+
+<span class="sd">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="sd">    Attributes</span>
 
@@ -1364,15 +1412,11 @@
 
 <span class="sd">    num_cols : type</span>
 
-<span class="sd">        Description of attribute `num_cols`.</span>
+<span class="sd">        Number of columns in each adj_matrix (or height_map) item.</span>
 
 <span class="sd">    num_rows : type</span>
 
-<span class="sd">        Description of attribute `num_rows`.</span>
-
-<span class="sd">    load_img_items : type</span>
-
-<span class="sd">        Description of attribute `load_img_items`.</span>
+<span class="sd">        Number of rows in each adj_matrix (or height_map) item.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -1434,19 +1478,39 @@
 
     <span class="n">def</span> <span class="n">__read_img_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 
-        <span class="sd">&quot;&quot;&quot;Short summary.</span>
+        <span class="sd">&quot;&quot;&quot;Read an image item from filename.</span>
 
 <span class="sd">        Parameters</span>
 
 <span class="sd">        ----------</span>
 
-<span class="sd">        filename : type</span>
+<span class="sd">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
 
-<span class="sd">            Description of parameter `filename`.</span>
+<span class="sd">        filename : str</span>
 
-<span class="sd">        **kwargs : type</span>
+<span class="sd">            File path.</span>
 
-<span class="sd">            Description of parameter `**kwargs`.</span>
+<span class="sd">        **kwargs : dict</span>
+
+<span class="sd">            **kwargs.</span>
+
+<span class="sd">        Returns</span>
+
+<span class="sd">        -------</span>
+
+<span class="sd">        numpy.ndarray</span>
+
+<span class="sd">            2D matrix representing an image.</span>
+
+<span class="sd">=======</span>
+
+<span class="sd">        filename : type, default=Required</span>
+
+<span class="sd">            File path.</span>
+
+<span class="sd">        **kwargs : Any, deafult=Automatically Determined</span>
+
+<span class="sd">            `**kwargs`.</span>
 
 <span class="sd">        Returns</span>
 
@@ -1454,7 +1518,9 @@
 
 <span class="sd">        type</span>
 
-<span class="sd">            Description of returned object.</span>
+<span class="sd">            Open image.</span>
+
+<span class="sd">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
 
@@ -1470,23 +1536,47 @@
 
                           <span class="n">resize_method</span><span class="o">=</span><span class="n">cv2</span><span class="o">.</span><span class="n">INTER_LINEAR</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 
-        <span class="sd">&quot;&quot;&quot;Short summary.</span>
+        <span class="sd">&quot;&quot;&quot;Resize an image item.</span>
 
 <span class="sd">        Parameters</span>
 
 <span class="sd">        ----------</span>
 
-<span class="sd">        img_item : type</span>
+<span class="sd">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
 
-<span class="sd">            Description of parameter `img_item`.</span>
+<span class="sd">        img_item : numpy.ndarray</span>
 
-<span class="sd">        resize_method : type</span>
+<span class="sd">            2D matrix representing an image.</span>
 
-<span class="sd">            Description of parameter `resize_method`.</span>
+<span class="sd">        resize_method : int</span>
+
+<span class="sd">            Type of the resize method i.e cv2.INTER_LINEAR.</span>
+
+<span class="sd">        **kwargs : dict</span>
+
+<span class="sd">            **kwargs</span>
+
+<span class="sd">        Returns</span>
+
+<span class="sd">        -------</span>
+
+<span class="sd">        numpy.ndarray</span>
+
+<span class="sd">            Resized image.</span>
+
+<span class="sd">=======</span>
+
+<span class="sd">        img_item : Bytes</span>
+
+<span class="sd">            Open image.</span>
+
+<span class="sd">        resize_method : method, default=cv2.INTER_LINEAR,</span>
+
+<span class="sd">            Type of resize method.</span>
 
 <span class="sd">        **kwargs : type</span>
 
-<span class="sd">            Description of parameter `**kwargs`.</span>
+<span class="sd">            **kwargs`</span>
 
 <span class="sd">        Returns</span>
 
@@ -1494,7 +1584,9 @@
 
 <span class="sd">        type</span>
 
-<span class="sd">            Description of returned object.</span>
+<span class="sd">            Risezed image.</span>
+
+<span class="sd">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
 
@@ -1512,15 +1604,31 @@
 
     <span class="n">def</span> <span class="n">load_img_items</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img_items</span><span class="p">):</span>
 
-        <span class="sd">&quot;&quot;&quot;Short summary.</span>
+        <span class="sd">&quot;&quot;&quot;Read and transform a list of image items.</span>
 
 <span class="sd">        Parameters</span>
 
 <span class="sd">        ----------</span>
 
-<span class="sd">        img_items : type</span>
+<span class="sd">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
 
-<span class="sd">            Description of parameter `img_items`.</span>
+<span class="sd">        img_items : list</span>
+
+<span class="sd">            List of paths, or list of numpy.ndarrays.</span>
+
+<span class="sd">        Returns</span>
+
+<span class="sd">        -------</span>
+
+<span class="sd">        list</span>
+
+<span class="sd">            List of the transformed images.</span>
+
+<span class="sd">=======</span>
+
+<span class="sd">        img_items : List</span>
+
+<span class="sd">            List of images.</span>
 
 <span class="sd">        Returns</span>
 
@@ -1528,7 +1636,9 @@
 
 <span class="sd">        type</span>
 
-<span class="sd">            Description of returned object.</span>
+<span class="sd">            List of risezed images.</span>
+
+<span class="sd">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
 
@@ -1550,15 +1660,25 @@
 
     <span class="n">def</span> <span class="n">generate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
-        <span class="sd">&quot;&quot;&quot;Short summary.</span>
+        <span class="sd">&quot;&quot;&quot;Generates a random AerialImageData object using the given terrain and person options.</span>
 
 <span class="sd">        Returns</span>
 
 <span class="sd">        -------</span>
 
+<span class="sd">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
+
+<span class="sd">        AerialImageData</span>
+
+<span class="sd">            Aerial image and its surrounding data.</span>
+
+<span class="sd">=======</span>
+
 <span class="sd">        type</span>
 
-<span class="sd">            Description of returned object.</span>
+<span class="sd">            Dict.</span>
+
+<span class="sd">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
 
@@ -1674,33 +1794,51 @@
 <span class="p">)</span>
 </code></pre></div>
 
-<p>Short summary.</p>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>type</td>
-<td>Description of returned object.</td>
-</tr>
-</tbody>
-</table>
+<p>Generates a random AerialImageData object using the given terrain and person options.</p>
+<p>Returns
+        -------
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+        AerialImageData
+            Aerial image and its surrounding data.
+=======
+        type
+            Dict.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>babf6803825d127003e989374de11514beea5d59</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">generate</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
 
-<span class="w">        </span><span class="ss">&quot;&quot;&quot;Short summary.</span>
+<span class="w">        </span><span class="ss">&quot;&quot;&quot;Generates a random AerialImageData object using the given terrain and person options.</span>
 
 <span class="ss">        Returns</span>
 
 <span class="ss">        -------</span>
 
+<span class="ss">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
+
+<span class="ss">        AerialImageData</span>
+
+<span class="ss">            Aerial image and its surrounding data.</span>
+
+<span class="ss">=======</span>
+
 <span class="ss">        type</span>
 
-<span class="ss">            Description of returned object.</span>
+<span class="ss">            Dict.</span>
+
+<span class="ss">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="ss">        &quot;&quot;&quot;</span><span class="w"></span>
 
@@ -1815,52 +1953,69 @@
 <span class="p">)</span>
 </code></pre></div>
 
-<p>Short summary.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<p>Read and transform a list of image items.</p>
+<p>Parameters
+        ----------
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+        img_items : list
+            List of paths, or list of numpy.ndarrays.</p>
+<div class="codehilite"><pre><span></span><code><span class="err">    Returns</span>
+<span class="err">    -------</span>
+<span class="err">    list</span>
+<span class="err">        List of the transformed images.</span>
+</code></pre></div>
 
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>img_items</td>
-<td>type</td>
-<td>Description of parameter <code>img_items</code>.</td>
+<p>=======
+        img_items : List
+            List of images.</p>
+<div class="codehilite"><pre><span></span><code><span class="err">    Returns</span>
+<span class="err">    -------</span>
+<span class="err">    type</span>
+<span class="err">        List of risezed images.</span>
+</code></pre></div>
 
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>type</td>
-<td>Description of returned object.</td>
-</tr>
-</tbody>
-</table>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>babf6803825d127003e989374de11514beea5d59</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">load_img_items</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img_items</span><span class="p">):</span>
 
-        <span class="sd">&quot;&quot;&quot;Short summary.</span>
+        <span class="sd">&quot;&quot;&quot;Read and transform a list of image items.</span>
 
 <span class="sd">        Parameters</span>
 
 <span class="sd">        ----------</span>
 
-<span class="sd">        img_items : type</span>
+<span class="sd">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
 
-<span class="sd">            Description of parameter `img_items`.</span>
+<span class="sd">        img_items : list</span>
+
+<span class="sd">            List of paths, or list of numpy.ndarrays.</span>
+
+<span class="sd">        Returns</span>
+
+<span class="sd">        -------</span>
+
+<span class="sd">        list</span>
+
+<span class="sd">            List of the transformed images.</span>
+
+<span class="sd">=======</span>
+
+<span class="sd">        img_items : List</span>
+
+<span class="sd">            List of images.</span>
 
 <span class="sd">        Returns</span>
 
@@ -1868,7 +2023,9 @@
 
 <span class="sd">        type</span>
 
-<span class="sd">            Description of returned object.</span>
+<span class="sd">            List of risezed images.</span>
+
+<span class="sd">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
 
@@ -1890,24 +2047,24 @@
 </code></pre></div>
 
 </details>
+                
+              
+              
+                
 
 
-
-
-
-
-
+              
             </article>
           </div>
         </div>
       </main>
-
-
+      
+        
 <footer class="md-footer">
-
+  
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
-
+        
           <a href="../../.." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
@@ -1921,8 +2078,8 @@
               </span>
             </div>
           </a>
-
-
+        
+        
           <a href="../graph_utils/" title="Graph Utils" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
@@ -1936,14 +2093,14 @@
               <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
             </div>
           </a>
-
+        
       </nav>
     </div>
-
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
-
+        
         Powered by
         <a href="http://timothycrosley.github.io/portray">portray.</a>
         You too can
@@ -1951,16 +2108,16 @@
           portray</a>
         your Python project well using automatic documentation.
       </div>
-
+      
     </div>
   </div>
 </footer>
-
+      
     </div>
-
+    
       <script src="../../../assets/javascripts/vendor.2d1db4bd.min.js"></script>
       <script src="../../../assets/javascripts/bundle.6627ddf3.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
-
+      
       <script>
         app = initialize({
           base: "../../..",
@@ -1970,7 +2127,7 @@
           }, typeof search !== "undefined" && search)
         })
       </script>
-
-
+      
+    
   </body>
 </html>
