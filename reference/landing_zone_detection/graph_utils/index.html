@@ -666,51 +666,27 @@
 
                          <span class="n">base_neighbours</span><span class="p">):</span>
 
-    <span class="sd">&quot;&quot;&quot;Recursive part of find_landing_zone.</span>
+    <span class="sd">&quot;&quot;&quot;Recursive part of find_landing_zone. It doesn&#39;t return anything, it just updates the shortest_paths_dict.</span>
 
 <span class="sd">    Parameters</span>
 
 <span class="sd">    ----------</span>
+
+<span class="sd">    current_coord : list</span>
+
+<span class="sd">        Description of parameter `current_coord`.</span>
 
 <span class="sd">    data : AerialImageData</span>
 
 <span class="sd">        Aerial image and its surrounding data (frame, adj_matrix, height_map and person_coord).</span>
 
-<span class="sd">    Returns</span>
+<span class="sd">    shortest_paths_dict : dict</span>
 
-<span class="sd">    -------</span>
+<span class="sd">        Dict of the path to each node.</span>
 
-<span class="sd">    (list, int)</span>
+<span class="sd">    base_neighbours : list of lists</span>
 
-<span class="sd">        Returns the shortest_path and the shortest_distance as a tuple.</span>
-
-<span class="sd">    Parameters</span>
-
-<span class="sd">    ----------</span>
-
-<span class="sd">    current_coord : type</span>
-
-<span class="sd">        Description of parameter `current_coord`.</span>
-
-<span class="sd">    data : type</span>
-
-<span class="sd">        Description of parameter `data`.</span>
-
-<span class="sd">    shortest_paths_dict : type</span>
-
-<span class="sd">        Description of parameter `shortest_paths_dict`.</span>
-
-<span class="sd">    base_neighbours : type</span>
-
-<span class="sd">        Description of parameter `base_neighbours`.</span>
-
-<span class="sd">    Returns</span>
-
-<span class="sd">    -------</span>
-
-<span class="sd">    type</span>
-
-<span class="sd">        Description of returned object.</span>
+<span class="sd">        Base neighbours of a matrix element i.e [[1, 0], [0, 1], [1, 1], [-1, 0], [0, -1], [-1, -1], [-1, 1], [1, -1]].</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -806,7 +782,7 @@
 <th>Name</th>
 <th>Type</th>
 <th>Description</th>
-
+<th>Default</th>
 </tr>
 </thead>
 <tbody>
@@ -814,37 +790,37 @@
 <td>x1</td>
 <td>int or float</td>
 <td>x coordinate of point 1.</td>
-
+<td>None</td>
 </tr>
 <tr>
 <td>y1</td>
 <td>int or float</td>
 <td>y coordinate of point 1`.</td>
-
+<td>None</td>
 </tr>
 <tr>
 <td>z1</td>
 <td>int or float</td>
 <td>z coordinate of point 1`.</td>
-
+<td>None</td>
 </tr>
 <tr>
 <td>x2</td>
 <td>int or float</td>
 <td>x coordinate of point 2`.</td>
-
+<td>None</td>
 </tr>
 <tr>
 <td>y2</td>
 <td>int or float</td>
 <td>y coordinate of point 2`.</td>
-
+<td>None</td>
 </tr>
 <tr>
 <td>z2</td>
 <td>int or float</td>
 <td>z coordinate of point 2`.</td>
-
+<td>None</td>
 </tr>
 </tbody>
 </table>
@@ -924,7 +900,7 @@
 <th>Name</th>
 <th>Type</th>
 <th>Description</th>
-
+<th>Default</th>
 </tr>
 </thead>
 <tbody>
@@ -932,13 +908,13 @@
 <td>coord</td>
 <td>numpy.ndarray</td>
 <td>2D coordinate.</td>
-
+<td>None</td>
 </tr>
 <tr>
 <td>matrix_shape</td>
 <td>numpy.ndarray</td>
 <td>Shape of the matrix to where the coordinate should point.</td>
-
+<td>None</td>
 </tr>
 </tbody>
 </table>
@@ -1001,7 +977,7 @@
 <th>Name</th>
 <th>Type</th>
 <th>Description</th>
-
+<th>Default</th>
 </tr>
 </thead>
 <tbody>
@@ -1009,7 +985,7 @@
 <td>data</td>
 <td>AerialImageData</td>
 <td>Aerial image and its surrounding data (frame, adj_matrix, height_map and person_coord).</td>
-
+<td>None</td>
 </tr>
 </tbody>
 </table>
@@ -1119,7 +1095,7 @@
 <span class="p">)</span>
 </code></pre></div>
 
-<p>Recursive part of find_landing_zone.</p>
+<p>Recursive part of find_landing_zone. It doesn't return anything, it just updates the shortest_paths_dict.</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1127,54 +1103,33 @@
 <th>Name</th>
 <th>Type</th>
 <th>Description</th>
-
+<th>Default</th>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>current_coord</td>
+<td>list</td>
+<td>Description of parameter <code>current_coord</code>.</td>
+<td>None</td>
+</tr>
 <tr>
 <td>data</td>
 <td>AerialImageData</td>
 <td>Aerial image and its surrounding data (frame, adj_matrix, height_map and person_coord).</td>
-
-</tr>
-<tr>
-<td>current_coord</td>
-<td>type</td>
-<td>Description of parameter <code>current_coord</code>.</td>
-
-</tr>
-<tr>
-<td>data</td>
-<td>type</td>
-<td>Description of parameter <code>data</code>.</td>
-
+<td>None</td>
 </tr>
 <tr>
 <td>shortest_paths_dict</td>
-<td>type</td>
-<td>Description of parameter <code>shortest_paths_dict</code>.</td>
-
+<td>dict</td>
+<td>Dict of the path to each node.</td>
+<td>None</td>
 </tr>
 <tr>
 <td>base_neighbours</td>
-<td>type</td>
-<td>Description of parameter <code>base_neighbours</code>.</td>
-
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>(list, int)</td>
-<td>Returns the shortest_path and the shortest_distance as a tuple.</td>
+<td>list of lists</td>
+<td>Base neighbours of a matrix element i.e [[1, 0], [0, 1], [1, 1], [-1, 0], [0, -1], [-1, -1], [-1, 1], [1, -1]].</td>
+<td>None</td>
 </tr>
 </tbody>
 </table>
@@ -1182,51 +1137,27 @@
 
 <span class="w">                         </span><span class="n">base_neighbours</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
 
-<span class="w">    </span><span class="ss">&quot;&quot;&quot;Recursive part of find_landing_zone.</span>
+<span class="w">    </span><span class="ss">&quot;&quot;&quot;Recursive part of find_landing_zone. It doesn&#39;t return anything, it just updates the shortest_paths_dict.</span>
 
 <span class="ss">    Parameters</span>
 
 <span class="ss">    ----------</span>
+
+<span class="ss">    current_coord : list</span>
+
+<span class="ss">        Description of parameter `current_coord`.</span>
 
 <span class="ss">    data : AerialImageData</span>
 
 <span class="ss">        Aerial image and its surrounding data (frame, adj_matrix, height_map and person_coord).</span>
 
-<span class="ss">    Returns</span>
+<span class="ss">    shortest_paths_dict : dict</span>
 
-<span class="ss">    -------</span>
+<span class="ss">        Dict of the path to each node.</span>
 
-<span class="ss">    (list, int)</span>
+<span class="ss">    base_neighbours : list of lists</span>
 
-<span class="ss">        Returns the shortest_path and the shortest_distance as a tuple.</span>
-
-<span class="ss">    Parameters</span>
-
-<span class="ss">    ----------</span>
-
-<span class="ss">    current_coord : type</span>
-
-<span class="ss">        Description of parameter `current_coord`.</span>
-
-<span class="ss">    data : type</span>
-
-<span class="ss">        Description of parameter `data`.</span>
-
-<span class="ss">    shortest_paths_dict : type</span>
-
-<span class="ss">        Description of parameter `shortest_paths_dict`.</span>
-
-<span class="ss">    base_neighbours : type</span>
-
-<span class="ss">        Description of parameter `base_neighbours`.</span>
-
-<span class="ss">    Returns</span>
-
-<span class="ss">    -------</span>
-
-<span class="ss">    type</span>
-
-<span class="ss">        Description of returned object.</span>
+<span class="ss">        Base neighbours of a matrix element i.e [[1, 0], [0, 1], [1, 1], [-1, 0], [0, -1], [-1, -1], [-1, 1], [1, -1]].</span>
 
 <span class="ss">    &quot;&quot;&quot;</span><span class="w"></span>
 
@@ -1316,7 +1247,7 @@
 <th>Name</th>
 <th>Type</th>
 <th>Description</th>
-
+<th>Default</th>
 </tr>
 </thead>
 <tbody>
@@ -1324,7 +1255,7 @@
 <td>coord</td>
 <td>list</td>
 <td>2D coordinate i.e (0,0).</td>
-
+<td>None</td>
 </tr>
 </tbody>
 </table>

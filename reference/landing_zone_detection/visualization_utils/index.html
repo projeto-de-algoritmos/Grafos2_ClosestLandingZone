@@ -5,74 +5,74 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-
+    
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
-
-
-
+      
+      
+      
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.14">
-
-
+    
+    
       
         <title>Visualization Utils - Grafos2_ClosestLandingZone</title>
-
-
-
+      
+    
+    
       <link rel="stylesheet" href="../../../assets/stylesheets/main.d3202873.min.css">
-
+      
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ff0a5ce4.min.css">
-
-
-
-
+      
+      
+        
+        
         <meta name="theme-color" content="#4cae4f">
-
-
-
-
-
+      
+    
+    
+    
+      
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
-
-
-
-
-
-
-
-
+      
+    
+    
+    
+    
+      
+    
+    
   </head>
-
-
-
-
-
+  
+  
+    
+    
+    
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent="lightgreen">
-
-
+  
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
-
-
+      
+        
         <a href="#module-landing_zone_detectionvisualization_utils" class="md-skip">
           Skip to content
         </a>
-
+      
     </div>
     <div data-md-component="announce">
-
+      
     </div>
-
+    
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="../../.." title="Grafos2_ClosestLandingZone" class="md-header-nav__button md-logo" aria-label="Grafos2_ClosestLandingZone">
-
-
+      
+  
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
@@ -80,24 +80,24 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
     <div class="md-header-nav__title" data-md-component="header-title">
-
+      
         <div class="md-header-nav__ellipsis">
           <span class="md-header-nav__topic md-ellipsis">
             Grafos2_ClosestLandingZone
           </span>
           <span class="md-header-nav__topic md-ellipsis">
-
+            
               Visualization Utils
-
+            
           </span>
         </div>
-
+      
     </div>
-
+    
       <label class="md-header-nav__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
-
+      
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -123,13 +123,13 @@
     </div>
   </div>
 </div>
-
-
+    
+    
       <div class="md-header-nav__source">
-
+        
 <a href="https://github.com/projeto-de-algoritmos/Grafos2_ClosestLandingZone/" title="Go to repository" class="md-source">
   <div class="md-source__icon md-icon">
-
+    
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
@@ -137,40 +137,40 @@
   </div>
 </a>
       </div>
-
+    
   </nav>
 </header>
-
+    
     <div class="md-container" data-md-component="container">
-
-
-
-
-
-
+      
+        
+      
+      
+        
+      
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
-
-
+          
+            
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Grafos2_ClosestLandingZone" class="md-nav__button md-logo" aria-label="Grafos2_ClosestLandingZone">
-
-
+      
+  
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
     Grafos2_ClosestLandingZone
   </label>
-
+  
     <div class="md-nav__source">
-
+      
 <a href="https://github.com/projeto-de-algoritmos/Grafos2_ClosestLandingZone/" title="Go to repository" class="md-source">
   <div class="md-source__icon md-icon">
-
+    
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
@@ -178,12 +178,12 @@
   </div>
 </a>
     </div>
-
+  
   <ul class="md-nav__list" data-md-scrollfix>
-
-
-
-
+    
+      
+      
+      
 
 
   <li class="md-nav__item">
@@ -192,18 +192,18 @@
     </a>
   </li>
 
+    
+      
+      
+      
 
-
-
-
-
-
+  
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-
+    
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
-
+    
     <label class="md-nav__link" for="nav-2">
       Reference
       <span class="md-nav__icon md-icon"></span>
@@ -214,19 +214,19 @@
         Reference
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
 
-
-
-
-
-
-
+  
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-
+    
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
-
+    
     <label class="md-nav__link" for="nav-2-1">
       Landing Zone Detection
       <span class="md-nav__icon md-icon"></span>
@@ -237,11 +237,11 @@
         Landing Zone Detection
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
-
-
-
-
-
+        
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -250,10 +250,10 @@
     </a>
   </li>
 
-
-
-
-
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -262,10 +262,10 @@
     </a>
   </li>
 
-
-
-
-
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -274,10 +274,10 @@
     </a>
   </li>
 
-
-
-
-
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -286,185 +286,185 @@
     </a>
   </li>
 
+        
+          
+          
+          
 
-
-
-
-
-
+  
 
 
   <li class="md-nav__item md-nav__item--active">
-
+    
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-
-
-
-
+    
+      
+    
+    
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Visualization Utils
         <span class="md-nav__icon md-icon"></span>
       </label>
-
+    
     <a href="./" title="Visualization Utils" class="md-nav__link md-nav__link--active">
       Visualization Utils
     </a>
-
-
+    
+      
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-
-
-
-
-
+  
+  
+    
+  
+  
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
-
+      
         <li class="md-nav__item">
   <a href="#functions" class="md-nav__link">
     Functions
   </a>
-
+  
     <nav class="md-nav" aria-label="Functions">
       <ul class="md-nav__list">
-
+        
           <li class="md-nav__item">
   <a href="#adj_matrix_to_image" class="md-nav__link">
     adj_matrix_to_image
   </a>
-
+  
 </li>
-
+        
           <li class="md-nav__item">
   <a href="#item_from_color" class="md-nav__link">
     item_from_color
   </a>
-
+  
 </li>
-
+        
           <li class="md-nav__item">
   <a href="#node_list_to_image" class="md-nav__link">
     node_list_to_image
   </a>
-
+  
 </li>
-
+        
           <li class="md-nav__item">
   <a href="#plot_frame" class="md-nav__link">
     plot_frame
   </a>
-
+  
 </li>
-
+        
       </ul>
     </nav>
-
+  
 </li>
-
+      
     </ul>
-
+  
 </nav>
-
+    
   </li>
 
-
+        
       </ul>
     </nav>
   </li>
 
-
+        
       </ul>
     </nav>
   </li>
 
-
+    
   </ul>
 </nav>
                   </div>
                 </div>
               </div>
-
-
+            
+            
               <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-
+                    
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-
-
-
-
-
+  
+  
+    
+  
+  
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
-
+      
         <li class="md-nav__item">
   <a href="#functions" class="md-nav__link">
     Functions
   </a>
-
+  
     <nav class="md-nav" aria-label="Functions">
       <ul class="md-nav__list">
-
+        
           <li class="md-nav__item">
   <a href="#adj_matrix_to_image" class="md-nav__link">
     adj_matrix_to_image
   </a>
-
+  
 </li>
-
+        
           <li class="md-nav__item">
   <a href="#item_from_color" class="md-nav__link">
     item_from_color
   </a>
-
+  
 </li>
-
+        
           <li class="md-nav__item">
   <a href="#node_list_to_image" class="md-nav__link">
     node_list_to_image
   </a>
-
+  
 </li>
-
+        
           <li class="md-nav__item">
   <a href="#plot_frame" class="md-nav__link">
     plot_frame
   </a>
-
+  
 </li>
-
+        
       </ul>
     </nav>
-
+  
 </li>
-
+      
     </ul>
-
+  
 </nav>
                   </div>
                 </div>
               </div>
-
-
+            
+          
           <div class="md-content">
             <article class="md-content__inner md-typeset">
-
-
+              
+                
                   <a href="https://github.com/projeto-de-algoritmos/Grafos2_ClosestLandingZone/edit/master/reference/landing_zone_detection/visualization_utils.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
-
-
-
-
-
+                
+                
+                  
+                
+                
                 <h1 id="module-landing_zone_detectionvisualization_utils">Module landing_zone_detection.visualization_utils</h1>
 <p>None</p>
 <p>None</p>
@@ -482,8 +482,6 @@
 
 <span class="sd">    ----------</span>
 
-<span class="sd">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
-
 <span class="sd">    color : int or list</span>
 
 <span class="sd">        RGB, gray or binary color i.e [255,255,255], 255 or 1. Maybe even RGBA or whatever.</span>
@@ -494,39 +492,15 @@
 
 <span class="sd">    row_size : int</span>
 
-<span class="sd">=======</span>
-
-<span class="sd">    color : List, default=Required</span>
-
-<span class="sd">        List with 3 int that describe rgb color.</span>
-
-<span class="sd">    col_size : Int, default=32</span>
-
-<span class="sd">        Color size.</span>
-
-<span class="sd">    row_size : Int, default=32</span>
-
-<span class="sd">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
-
 <span class="sd">        Size of a row.</span>
 
 <span class="sd">    Returns</span>
 
 <span class="sd">    -------</span>
 
-<span class="sd">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
-
 <span class="sd">    numpy.ndarray</span>
 
 <span class="sd">        2D matrix representing an image.</span>
-
-<span class="sd">=======</span>
-
-<span class="sd">    ndarray</span>
-
-<span class="sd">        Output array which has the same shape as color.</span>
-
-<span class="sd">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -561,8 +535,6 @@
 <span class="sd">    Parameters</span>
 
 <span class="sd">    ----------</span>
-
-<span class="sd">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
 
 <span class="sd">    adj_matrix : numpy.ndarray</span>
 
@@ -599,46 +571,6 @@
 <span class="sd">    numpy.ndarray</span>
 
 <span class="sd">        2D matrix representing an image.</span>
-
-<span class="sd">=======</span>
-
-<span class="sd">    adj_matrix : ndarray, default=Required</span>
-
-<span class="sd">        Adjacency matrix.</span>
-
-<span class="sd">    value_to_color : dict</span>
-
-<span class="sd">        Dict with colors of wich tipo of terrain.</span>
-
-<span class="sd">    num_cols : int, default=7</span>
-
-<span class="sd">        number of columns.</span>
-
-<span class="sd">    num_rows : type, default=7</span>
-
-<span class="sd">        number of rows.</span>
-
-<span class="sd">    col_size : type, default=32</span>
-
-<span class="sd">        Size of columns.</span>
-
-<span class="sd">    row_size : type, default=32</span>
-
-<span class="sd">        number of rows.</span>
-
-<span class="sd">    img_dtype : type, default=np.uint8</span>
-
-<span class="sd">        Data type of image.</span>
-
-<span class="sd">    Returns</span>
-
-<span class="sd">    -------</span>
-
-<span class="sd">    type</span>
-
-<span class="sd">        Image.</span>
-
-<span class="sd">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -694,8 +626,6 @@
 
 <span class="sd">    ----------</span>
 
-<span class="sd">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
-
 <span class="sd">    node_list : list</span>
 
 <span class="sd">        List of node coordinates i.e [(0,0), (0,1), (0,2), (1,2)].</span>
@@ -723,38 +653,6 @@
 <span class="sd">    img_dtype : int</span>
 
 <span class="sd">        Data type of the resulting image.</span>
-
-<span class="sd">=======</span>
-
-<span class="sd">    node_list : List</span>
-
-<span class="sd">        list of nodes.</span>
-
-<span class="sd">    item_color : List</span>
-
-<span class="sd">        Item Color`.</span>
-
-<span class="sd">    num_cols : Int</span>
-
-<span class="sd">        Number of colors.</span>
-
-<span class="sd">    num_rows : int</span>
-
-<span class="sd">        Number of rows.</span>
-
-<span class="sd">    col_size : int</span>
-
-<span class="sd">        Color size.</span>
-
-<span class="sd">    row_size : int</span>
-
-<span class="sd">        Row size.</span>
-
-<span class="sd">    img_dtype : int</span>
-
-<span class="sd">        image Data type`.</span>
-
-<span class="sd">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="sd">    Returns</span>
 
@@ -798,8 +696,6 @@
 
 <span class="sd">    ----------</span>
 
-<span class="sd">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
-
 <span class="sd">    frame : numpy.ndarray</span>
 
 <span class="sd">        2D matrix representing an image.</span>
@@ -815,32 +711,6 @@
 <span class="sd">    images_to_overlay : list</span>
 
 <span class="sd">        List of images to overlay on top of the frame.</span>
-
-<span class="sd">=======</span>
-
-<span class="sd">    frame : type</span>
-
-<span class="sd">        Description of parameter `frame`.</span>
-
-<span class="sd">    width : Int</span>
-
-<span class="sd">        Frame width.</span>
-
-<span class="sd">    height : Int</span>
-
-<span class="sd">        Frame height.</span>
-
-<span class="sd">    images_to_overlay : List</span>
-
-<span class="sd">        List of frame to overlay.</span>
-
-<span class="sd">    Returns</span>
-
-<span class="sd">    -------</span>
-
-<span class="sd">    None</span>
-
-<span class="sd">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -889,65 +759,76 @@
 </code></pre></div>
 
 <p>Convert a node list to an image. Do that by coloring the image items at the coordinates in the node_list.</p>
-<p>Parameters
-    ----------
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-    adj_matrix : numpy.ndarray
-        Adjacent matrix where the meaning of each value is specified in the label_utils.py module.
-    value_to_color : dict
-        Dict to map each value in the adj_matrix to a differenct color.
-    num_cols : int
-        Number of columns in each adj_matrix (or height_map) item.
-    num_rows : int
-        Number of rows in each adj_matrix (or height_map) item.
-    col_size : int
-        Width of each adj_matrix (or height_map) item.
-    row_size : int
-        Height of each adj_matrix (or height_map) item.
-    img_dtype : int
-        Data type of the resulting image.</p>
-<div class="codehilite"><pre><span></span><code><span class="gh">Returns</span>
-<span class="gh">-------</span>
-numpy.ndarray
-    2D matrix representing an image.
-</code></pre></div>
-
-<p>=======
-    adj_matrix : ndarray, default=Required
-        Adjacency matrix.
-    value_to_color : dict
-        Dict with colors of wich tipo of terrain.
-    num_cols : int, default=7
-        number of columns.
-    num_rows : type, default=7
-        number of rows.
-    col_size : type, default=32
-        Size of columns.
-    row_size : type, default=32
-        number of rows.
-    img_dtype : type, default=np.uint8
-        Data type of image.</p>
-<div class="codehilite"><pre><span></span><code><span class="gh">Returns</span>
-<span class="gh">-------</span>
-type
-    Image.
-</code></pre></div>
-
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>babf6803825d127003e989374de11514beea5d59</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>adj_matrix</td>
+<td>numpy.ndarray</td>
+<td>Adjacent matrix where the meaning of each value is specified in the label_utils.py module.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>value_to_color</td>
+<td>dict</td>
+<td>Dict to map each value in the adj_matrix to a differenct color.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>num_cols</td>
+<td>int</td>
+<td>Number of columns in each adj_matrix (or height_map) item.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>num_rows</td>
+<td>int</td>
+<td>Number of rows in each adj_matrix (or height_map) item.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>col_size</td>
+<td>int</td>
+<td>Width of each adj_matrix (or height_map) item.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>row_size</td>
+<td>int</td>
+<td>Height of each adj_matrix (or height_map) item.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>img_dtype</td>
+<td>int</td>
+<td>Data type of the resulting image.</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>numpy.ndarray</td>
+<td>2D matrix representing an image.</td>
+</tr>
+</tbody>
+</table>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span><span class="w"> </span><span class="n">adj_matrix_to_image</span><span class="p">(</span><span class="n">adj_matrix</span><span class="p">,</span><span class="w"></span>
 
 <span class="w">                        </span><span class="n">value_to_color</span><span class="o">=</span><span class="err">{</span><span class="mi">1</span><span class="err">:</span><span class="w"> </span><span class="o">[</span><span class="n">80, 30, 50</span><span class="o">]</span><span class="p">,</span><span class="w"></span>
@@ -969,8 +850,6 @@ type
 <span class="ss">    Parameters</span>
 
 <span class="ss">    ----------</span>
-
-<span class="ss">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
 
 <span class="ss">    adj_matrix : numpy.ndarray</span>
 
@@ -1007,46 +886,6 @@ type
 <span class="ss">    numpy.ndarray</span>
 
 <span class="ss">        2D matrix representing an image.</span>
-
-<span class="ss">=======</span>
-
-<span class="ss">    adj_matrix : ndarray, default=Required</span>
-
-<span class="ss">        Adjacency matrix.</span>
-
-<span class="ss">    value_to_color : dict</span>
-
-<span class="ss">        Dict with colors of wich tipo of terrain.</span>
-
-<span class="ss">    num_cols : int, default=7</span>
-
-<span class="ss">        number of columns.</span>
-
-<span class="ss">    num_rows : type, default=7</span>
-
-<span class="ss">        number of rows.</span>
-
-<span class="ss">    col_size : type, default=32</span>
-
-<span class="ss">        Size of columns.</span>
-
-<span class="ss">    row_size : type, default=32</span>
-
-<span class="ss">        number of rows.</span>
-
-<span class="ss">    img_dtype : type, default=np.uint8</span>
-
-<span class="ss">        Data type of image.</span>
-
-<span class="ss">    Returns</span>
-
-<span class="ss">    -------</span>
-
-<span class="ss">    type</span>
-
-<span class="ss">        Image.</span>
-
-<span class="ss">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="ss">    &quot;&quot;&quot;</span><span class="w"></span>
 
@@ -1095,61 +934,52 @@ type
 </code></pre></div>
 
 <p>Generates a matrix of size (col_size, row_size, len(color)) if color is 1D or a matrix of size (col_size, row_size) if color is a digit.</p>
-<p>Parameters
-    ----------
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-    color : int or list
-        RGB, gray or binary color i.e [255,255,255], 255 or 1. Maybe even RGBA or whatever.
-    col_size : int
-        Color size.
-    row_size : int
-=======
-    color : List, default=Required
-        List with 3 int that describe rgb color.
-    col_size : Int, default=32
-        Color size.
-    row_size : Int, default=32</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>babf6803825d127003e989374de11514beea5d59
-        Size of a row.</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<div class="codehilite"><pre><span></span><code><span class="err">Returns</span>
-<span class="err">-------</span>
-</code></pre></div>
-
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-    numpy.ndarray
-        2D matrix representing an image.
-=======
-    ndarray
-        Output array which has the same shape as color.</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>babf6803825d127003e989374de11514beea5d59</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>color</td>
+<td>int or list</td>
+<td>RGB, gray or binary color i.e [255,255,255], 255 or 1. Maybe even RGBA or whatever.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>col_size</td>
+<td>int</td>
+<td>Color size.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>row_size</td>
+<td>int</td>
+<td>Size of a row.</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>numpy.ndarray</td>
+<td>2D matrix representing an image.</td>
+</tr>
+</tbody>
+</table>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span><span class="w"> </span><span class="n">item_from_color</span><span class="p">(</span><span class="n">color</span><span class="p">,</span><span class="w"> </span><span class="n">col_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span><span class="w"> </span><span class="n">row_size</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
 
 <span class="w">    </span><span class="ss">&quot;&quot;&quot;Generates a matrix of size (col_size, row_size, len(color)) if color is 1D or a matrix of size (col_size, row_size) if color is a digit.</span>
@@ -1157,8 +987,6 @@ type
 <span class="ss">    Parameters</span>
 
 <span class="ss">    ----------</span>
-
-<span class="ss">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
 
 <span class="ss">    color : int or list</span>
 
@@ -1170,39 +998,15 @@ type
 
 <span class="ss">    row_size : int</span>
 
-<span class="ss">=======</span>
-
-<span class="ss">    color : List, default=Required</span>
-
-<span class="ss">        List with 3 int that describe rgb color.</span>
-
-<span class="ss">    col_size : Int, default=32</span>
-
-<span class="ss">        Color size.</span>
-
-<span class="ss">    row_size : Int, default=32</span>
-
-<span class="ss">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
-
 <span class="ss">        Size of a row.</span>
 
 <span class="ss">    Returns</span>
 
 <span class="ss">    -------</span>
 
-<span class="ss">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
-
 <span class="ss">    numpy.ndarray</span>
 
 <span class="ss">        2D matrix representing an image.</span>
-
-<span class="ss">=======</span>
-
-<span class="ss">    ndarray</span>
-
-<span class="ss">        Output array which has the same shape as color.</span>
-
-<span class="ss">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="ss">    &quot;&quot;&quot;</span><span class="w"></span>
 
@@ -1232,59 +1036,76 @@ type
 </code></pre></div>
 
 <p>Convert a node list to an image. Do that by coloring the image items at the coordinates in the node_list.</p>
-<p>Parameters
-    ----------
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-    node_list : list
-        List of node coordinates i.e [(0,0), (0,1), (0,2), (1,2)].
-    item_color : list
-        Color of each node/item.
-    num_cols : int
-        Number of columns in each adj_matrix (or height_map) item.
-    num_rows : int
-        Number of rows in each adj_matrix (or height_map) item.
-    col_size : int
-        Width of each adj_matrix (or height_map) item.
-    row_size : int
-        Height of each adj_matrix (or height_map) item.
-    img_dtype : int
-        Data type of the resulting image.
-=======
-    node_list : List
-        list of nodes.
-    item_color : List
-        Item Color<code>.
-    num_cols : Int
-        Number of colors.
-    num_rows : int
-        Number of rows.
-    col_size : int
-        Color size.
-    row_size : int
-        Row size.
-    img_dtype : int
-        image Data type</code>.</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>babf6803825d127003e989374de11514beea5d59</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<div class="codehilite"><pre><span></span><code><span class="gh">Returns</span>
-<span class="gh">-------</span>
-numpy.ndarray
-    2D matrix representing an image.
-</code></pre></div>
-
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>node_list</td>
+<td>list</td>
+<td>List of node coordinates i.e [(0,0), (0,1), (0,2), (1,2)].</td>
+<td>None</td>
+</tr>
+<tr>
+<td>item_color</td>
+<td>list</td>
+<td>Color of each node/item.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>num_cols</td>
+<td>int</td>
+<td>Number of columns in each adj_matrix (or height_map) item.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>num_rows</td>
+<td>int</td>
+<td>Number of rows in each adj_matrix (or height_map) item.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>col_size</td>
+<td>int</td>
+<td>Width of each adj_matrix (or height_map) item.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>row_size</td>
+<td>int</td>
+<td>Height of each adj_matrix (or height_map) item.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>img_dtype</td>
+<td>int</td>
+<td>Data type of the resulting image.</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>numpy.ndarray</td>
+<td>2D matrix representing an image.</td>
+</tr>
+</tbody>
+</table>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">node_list_to_image</span><span class="p">(</span><span class="n">node_list</span><span class="p">,</span>
 
                        <span class="n">item_color</span><span class="o">=</span><span class="p">[</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
@@ -1302,8 +1123,6 @@ numpy.ndarray
 <span class="ss">    Parameters</span>
 
 <span class="ss">    ----------</span>
-
-<span class="ss">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
 
 <span class="ss">    node_list : list</span>
 
@@ -1332,38 +1151,6 @@ numpy.ndarray
 <span class="ss">    img_dtype : int</span>
 
 <span class="ss">        Data type of the resulting image.</span>
-
-<span class="ss">=======</span>
-
-<span class="ss">    node_list : List</span>
-
-<span class="ss">        list of nodes.</span>
-
-<span class="ss">    item_color : List</span>
-
-<span class="ss">        Item Color`.</span>
-
-<span class="ss">    num_cols : Int</span>
-
-<span class="ss">        Number of colors.</span>
-
-<span class="ss">    num_rows : int</span>
-
-<span class="ss">        Number of rows.</span>
-
-<span class="ss">    col_size : int</span>
-
-<span class="ss">        Color size.</span>
-
-<span class="ss">    row_size : int</span>
-
-<span class="ss">        Row size.</span>
-
-<span class="ss">    img_dtype : int</span>
-
-<span class="ss">        image Data type`.</span>
-
-<span class="ss">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
 
 <span class="ss">    Returns</span>
 
@@ -1411,123 +1198,92 @@ numpy.ndarray
 </code></pre></div>
 
 <p>Method to plot the frame.</p>
-<p>Parameters
-    ----------
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-    frame : numpy.ndarray
-        2D matrix representing an image.
-    width : int
-        Frame width.
-    height : int
-        Frame height.
-    images_to_overlay : list
-        List of images to overlay on top of the frame.
-=======
-    frame : type
-        Description of parameter <code>frame</code>.
-    width : Int
-        Frame width.
-    height : Int
-        Frame height.
-    images_to_overlay : List
-        List of frame to overlay.</p>
-<div class="codehilite"><pre><span></span><code><span class="gh">Returns</span>
-<span class="gh">-------</span>
-None
-</code></pre></div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>frame</td>
+<td>numpy.ndarray</td>
+<td>2D matrix representing an image.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>width</td>
+<td>int</td>
+<td>Frame width.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>height</td>
+<td>int</td>
+<td>Frame height.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>images_to_overlay</td>
+<td>list</td>
+<td>List of images to overlay on top of the frame.</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">plot_frame</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">224</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">224</span><span class="p">,</span> <span class="n">images_to_overlay</span><span class="o">=</span><span class="p">[]):</span>
 
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>babf6803825d127003e989374de11514beea5d59</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">plot_frame</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">224</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">224</span><span class="p">,</span> <span class="n">images_to_overlay</span><span class="o">=</span><span class="err">[]</span><span class="p">)</span><span class="o">:</span>
+    <span class="ss">&quot;&quot;&quot;Method to plot the frame.</span>
 
-    <span class="s2">&quot;</span><span class="se">&quot;&quot;</span><span class="s2">Method to plot the frame.</span>
+<span class="ss">    Parameters</span>
 
-<span class="s2">    Parameters</span>
+<span class="ss">    ----------</span>
 
-<span class="s2">    ----------</span>
+<span class="ss">    frame : numpy.ndarray</span>
 
-<span class="s2">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
+<span class="ss">        2D matrix representing an image.</span>
 
-<span class="s2">    frame : numpy.ndarray</span>
+<span class="ss">    width : int</span>
 
-<span class="s2">        2D matrix representing an image.</span>
+<span class="ss">        Frame width.</span>
 
-<span class="s2">    width : int</span>
+<span class="ss">    height : int</span>
 
-<span class="s2">        Frame width.</span>
+<span class="ss">        Frame height.</span>
 
-<span class="s2">    height : int</span>
+<span class="ss">    images_to_overlay : list</span>
 
-<span class="s2">        Frame height.</span>
+<span class="ss">        List of images to overlay on top of the frame.</span>
 
-<span class="s2">    images_to_overlay : list</span>
+<span class="ss">    &quot;&quot;&quot;</span>
 
-<span class="s2">        List of images to overlay on top of the frame.</span>
+    <span class="o">#</span> <span class="k">overlay</span> <span class="n">images</span> <span class="k">on</span> <span class="n">the</span> <span class="n">frame</span>
 
-<span class="s2">=======</span>
+    <span class="k">if</span> <span class="n">images_to_overlay</span><span class="p">:</span>
 
-<span class="s2">    frame : type</span>
+        <span class="n">img_to_overlay</span> <span class="o">=</span> <span class="n">images_to_overlay</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
-<span class="s2">        Description of parameter `frame`.</span>
-
-<span class="s2">    width : Int</span>
-
-<span class="s2">        Frame width.</span>
-
-<span class="s2">    height : Int</span>
-
-<span class="s2">        Frame height.</span>
-
-<span class="s2">    images_to_overlay : List</span>
-
-<span class="s2">        List of frame to overlay.</span>
-
-<span class="s2">    Returns</span>
-
-<span class="s2">    -------</span>
-
-<span class="s2">    None</span>
-
-<span class="s2">&gt;&gt;&gt;&gt;&gt;&gt;&gt; babf6803825d127003e989374de11514beea5d59</span>
-
-<span class="s2">    </span><span class="se">&quot;&quot;</span><span class="s2">&quot;</span>
-
-    <span class="c1"># overlay images on the frame</span>
-
-    <span class="k">if</span> <span class="n">images_to_overlay</span><span class="o">:</span>
-
-        <span class="n">img_to_overlay</span> <span class="o">=</span> <span class="n">images_to_overlay</span><span class="err">[</span><span class="mi">0</span><span class="err">]</span>
-
-    <span class="k">for</span> <span class="n">img</span> <span class="k">in</span> <span class="n">images_to_overlay</span><span class="err">[</span><span class="mi">1</span><span class="o">:</span><span class="err">]</span><span class="o">:</span>
+    <span class="k">for</span> <span class="n">img</span> <span class="k">in</span> <span class="n">images_to_overlay</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
 
         <span class="n">img_to_overlay</span> <span class="o">+=</span> <span class="n">img</span>
 
-    <span class="k">if</span> <span class="n">images_to_overlay</span><span class="o">:</span>
+    <span class="k">if</span> <span class="n">images_to_overlay</span><span class="p">:</span>
 
-        <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">addWeighted</span><span class="p">(</span><span class="n">img_to_overlay</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">frame</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+        <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">addWeighted</span><span class="p">(</span><span class="n">img_to_overlay</span><span class="p">,</span> <span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span> <span class="n">frame</span><span class="p">,</span> <span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">)</span>
 
-    <span class="c1"># resize to desired size with bilinear interpolation</span>
+    <span class="o">#</span> <span class="n">resize</span> <span class="k">to</span> <span class="n">desired</span> <span class="k">size</span> <span class="k">with</span> <span class="n">bilinear</span> <span class="n">interpolation</span>
 
     <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">),</span> <span class="n">interpolation</span><span class="o">=</span><span class="n">cv2</span><span class="p">.</span><span class="n">INTER_LINEAR</span><span class="p">)</span>
 
-    <span class="c1"># convert from BGR to RGB for plotting purposes</span>
+    <span class="o">#</span> <span class="k">convert</span> <span class="k">from</span> <span class="n">BGR</span> <span class="k">to</span> <span class="n">RGB</span> <span class="k">for</span> <span class="n">plotting</span> <span class="n">purposes</span>
 
     <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">cv2</span><span class="p">.</span><span class="n">COLOR_BGR2RGB</span><span class="p">)</span>
 
-    <span class="c1"># plot the resulting frame</span>
+    <span class="o">#</span> <span class="n">plot</span> <span class="n">the</span> <span class="n">resulting</span> <span class="n">frame</span>
 
     <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
 
@@ -1535,24 +1291,24 @@ None
 </code></pre></div>
 
 </details>
+                
+              
+              
+                
 
 
-
-
-
-
-
+              
             </article>
           </div>
         </div>
       </main>
-
-
+      
+        
 <footer class="md-footer">
-
+  
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
-
+        
           <a href="../label_utils/" title="Label Utils" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
@@ -1566,15 +1322,15 @@ None
               </span>
             </div>
           </a>
-
-
+        
+        
       </nav>
     </div>
-
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
-
+        
         Powered by
         <a href="http://timothycrosley.github.io/portray">portray.</a>
         You too can
@@ -1582,16 +1338,16 @@ None
           portray</a>
         your Python project well using automatic documentation.
       </div>
-
+      
     </div>
   </div>
 </footer>
-
+      
     </div>
-
+    
       <script src="../../../assets/javascripts/vendor.2d1db4bd.min.js"></script>
       <script src="../../../assets/javascripts/bundle.6627ddf3.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
-
+      
       <script>
         app = initialize({
           base: "../../..",
@@ -1601,7 +1357,7 @@ None
           }, typeof search !== "undefined" && search)
         })
       </script>
-
-
+      
+    
   </body>
 </html>

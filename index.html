@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#landing-zone-detection" class="md-skip">
+        <a href="#closest-landing-zone" class="md-skip">
           Skip to content
         </a>
       
@@ -477,8 +477,8 @@
                   
                 
                 
-                <h1 id="landing-zone-detection">Landing Zone Detection</h1>
-<p>Determine which of the reachable detected landing zones is closest to the person.</p>
+                <h1 id="closest-landing-zone">Closest Landing Zone</h1>
+<p>This algorithm finds the closest and reachable safe landing zone next to the human who's waiting for the autonomous UAV.</p>
 <p><strong>List Number</strong>: X<br>
 <strong>Discipline Subject</strong>: Graphs II<br></p>
 <h2 id="students">Students</h2>
@@ -501,15 +501,26 @@
 </tbody>
 </table>
 <h2 id="about">About</h2>
+<p>We generated some mock test data from Pokemon Emerald. These are the rules for it:</p>
+<ul>
+<li>
+<p>The UAV can only land in the green area with low grass.</p>
+</li>
+<li>
+<p>A human can move between areas with tall grass and low grass, but not trees.</p>
+</li>
+</ul>
+<p>The closest path is not always the most obvious as there are unevenness between the terrains, so the algorithm must be able to find the shortest path taking it into account. There might also be a landing zone that is so high that it is unreachable by a human, like the roof of a house. So even if it's the closest place the UAV cannot land there.</p>
 <h2 id="app-gif">App Gif</h2>
 <p><img alt="App Gif" src="assets/app_gif.gif" /></p>
-<h2 id="video-pt-br-download-link">Video (pt-br, <a href="https://raw.githubusercontent.com/projeto-de-algoritmos/Grafos2_LandingZoneDetection/main/assets/app_video.mp4">download link</a>)</h2>
-<p><a href=""><img alt="" src="assets/app_video_splash_screen.png" /></a></p>
+<h2 id="video-pt-br-download-link">Video (pt-br, <a href="https://raw.githubusercontent.com/projeto-de-algoritmos/Grafos2_ClosestLandingZone/main/assets/app_video.mp4">download link</a>)</h2>
+<p><a href="https://youtu.be/RJ-OouSKQ2Y"><img alt="" src="assets/app_video_splash_screen.png" /></a></p>
 <h2 id="how-to-run">How to run</h2>
 <p><strong>Language</strong>: Python.<br>
 <strong>Frameworks</strong>: OpenCV; Jupyter Voilà; BinderHub.<br>
-Access the <a href="https://mybinder.org/v2/gh/projeto-de-algoritmos/Grafos2_LandingZoneDetection/main?urlpath=%2Fvoila%2Frender%2Fapp.ipynb">app</a> or the <a href="https://mybinder.org/v2/gh/projeto-de-algoritmos/Grafos2_LandingZoneDetection/main?filepath=app.ipynb">notebook</a> with the BinderHub server.</p>
+Access the <a href="https://mybinder.org/v2/gh/projeto-de-algoritmos/Grafos2_ClosestLandingZone/main?urlpath=%2Fvoila%2Frender%2Fapp.ipynb">app</a> or the <a href="https://mybinder.org/v2/gh/projeto-de-algoritmos/Grafos2_ClosestLandingZone/main?filepath=app.ipynb">notebook</a> with the BinderHub server.</p>
 <h2 id="how-to-use">How to use</h2>
+<p>The app generate a random image for each iteration. Everytime you click the update button, a new random image is generated and the algorithm gets executed.</p>
 <h2 id="references">References</h2>
 <p>Jupyter et al., "Binder 2.0 - Reproducible, Interactive, Sharable
 Environments for Science at Scale." Proceedings of the 17th Python
