@@ -1111,7 +1111,7 @@
 <th>Name</th>
 <th>Type</th>
 <th>Description</th>
-<th>Default</th>
+
 </tr>
 </thead>
 <tbody>
@@ -1119,25 +1119,25 @@
 <td>frame</td>
 <td>numpy.ndarray</td>
 <td>Frame (image) taken by the flying UAV.</td>
-<td>None</td>
+
 </tr>
 <tr>
 <td>adj_matrix</td>
 <td>numpy.ndarray</td>
 <td>Adjacent matrix where the meaning of each value is specified in the label_utils.py module.</td>
-<td>None</td>
+
 </tr>
 <tr>
 <td>height_map</td>
 <td>numpy.ndarray</td>
 <td>Depth estimation of the frame. Same shape as the adj_matrix.</td>
-<td>None</td>
+
 </tr>
 <tr>
 <td>person_coord</td>
 <td>list</td>
 <td>(x, y) coordinate of a person in the adj_matrix. This is the person who's supposed to receive the UAV.</td>
-<td>None</td>
+
 </tr>
 </tbody>
 </table>
@@ -1206,7 +1206,7 @@
 <th>Name</th>
 <th>Type</th>
 <th>Description</th>
-<th>Default</th>
+
 </tr>
 </thead>
 <tbody>
@@ -1214,85 +1214,85 @@
 <td>width</td>
 <td>int</td>
 <td>Image width.</td>
-<td>None</td>
+
 </tr>
 <tr>
 <td>height</td>
 <td>int</td>
 <td>Image  height.</td>
-<td>None</td>
+
 </tr>
 <tr>
 <td>channels</td>
 <td>int</td>
 <td>Number of channels in the image.</td>
-<td>None</td>
+
 </tr>
 <tr>
 <td>dtype</td>
 <td>np.uint8</td>
 <td>Data type of the frame.</td>
-<td>None</td>
+
 </tr>
 <tr>
 <td>col_size</td>
 <td>int</td>
 <td>Width of each adj_matrix (or height_map) item.</td>
-<td>None</td>
+
 </tr>
 <tr>
 <td>row_size</td>
 <td>int</td>
 <td>Height of each adj_matrix (or height_map) item.</td>
-<td>None</td>
+
 </tr>
 <tr>
 <td>terrain_options_images</td>
 <td>list</td>
 <td>Each item of the image can randomly assume one of this images.</td>
-<td>None</td>
+
 </tr>
 <tr>
 <td>terrain_options_labels</td>
 <td>list</td>
 <td>Labels of each option in terrain_options_images.</td>
-<td>None</td>
+
 </tr>
 <tr>
 <td>terrain_options_heights</td>
 <td>list</td>
 <td>Estimated depth (height from the drone to the ground) of each option in terrain_options_images.</td>
-<td>None</td>
+
 </tr>
 <tr>
 <td>person_options_images</td>
 <td>list</td>
 <td>Until now, only one random item of the image can assume one of this images. In other words: only one person per image.</td>
-<td>None</td>
+
 </tr>
 <tr>
 <td>person_options_labels</td>
 <td>list</td>
 <td>Labels of each person_options in person_options_images.</td>
-<td>None</td>
+
 </tr>
 <tr>
 <td>person_options_heights</td>
 <td>list</td>
 <td>Estimated depth (height from the drone to the ground) of each option in person_options_images.</td>
-<td>None</td>
+
 </tr>
 <tr>
 <td>num_cols</td>
 <td>type</td>
 <td>Number of columns in each adj_matrix (or height_map) item.</td>
-<td>None</td>
+
 </tr>
 <tr>
 <td>num_rows</td>
 <td>type</td>
 <td>Number of rows in each adj_matrix (or height_map) item.</td>
-<td>None</td>
+
 </tr>
 </tbody>
 </table>
@@ -1813,7 +1813,7 @@
 <th>Name</th>
 <th>Type</th>
 <th>Description</th>
-<th>Default</th>
+
 </tr>
 </thead>
 <tbody>
@@ -1821,7 +1821,7 @@
 <td>img_items</td>
 <td>list</td>
 <td>List of paths, or list of numpy.ndarrays.</td>
-<td>None</td>
+
 </tr>
 </tbody>
 </table>
